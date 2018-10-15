@@ -5,14 +5,18 @@ module.exports = {
     docsDir: 'docs',
     repo: 'fivefilters/docs',
     editLinks: true,
-    sidebar: 'auto',
-    /*
-      [
-      '/',
-      '/welcome',
-      '/test'
+    sidebar: {
+
+      '/full-text-rss/': [
+        ''      /* /bar/ */
       ],
-    */
+      
+      '/': [
+        '',
+        '/welcome',
+        '/test'
+      ]
+    },
     nav: [
       {
         text: 'Admin',
