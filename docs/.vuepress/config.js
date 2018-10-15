@@ -3,12 +3,16 @@ module.exports = {
   description: 'Netlify + VuePress',
   themeConfig: {
     docsDir: 'docs',
-    repo: 'andreliem/vuepress-netlify-cms',
-    sidebar: [
+    repo: 'fivefilters/docs',
+    editLinks: true,
+    sidebar: 'auto',
+    /*
+      [
       '/',
       '/welcome',
       '/test'
-    ],
+      ],
+    */
     nav: [
       {
         text: 'Admin',
