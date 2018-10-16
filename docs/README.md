@@ -11,8 +11,18 @@ meta:
   content: full-text rss, kindle, fivefilters, docs, api, howto, push to kindle, term extraction, install, pdf newspaper
 ---
 
+<style>
+  .description { display: none }
+</style>
+
 # Get Started
-Test
-## Test 2
-Test
-## [Full-Text RSS](/full-text-rss)
+
+* [Full-Text RSS](/full-text-rss)
+
+# Forum
+
+We answer questions on our forum at
+
+# Your account
+
+To check your account and download software you've purchased, p

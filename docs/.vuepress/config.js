@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Documentation',
-/*  description: 'Documentation', */
+  description: 'Documentation', 
   themeConfig: {
     docsDir: 'docs',
     repo: 'fivefilters/docs',
