@@ -1,8 +1,15 @@
 module.exports = {
-  title: 'Documentation',
+  plugins: [
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }]
+  ],
+  title: 'FiveFilters.org',
   description: 'Documentation', 
   themeConfig: {
     docsDir: 'docs',
+    search: true,
+    searchMaxSuggestions: 10,
     repo: 'fivefilters/docs',
     editLinks: true,
     sidebar: {
