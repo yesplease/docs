@@ -19,9 +19,7 @@ module.exports = {
       ],
       
       '/': [
-        '',
-        '/welcome',
-        '/test'
+        ''
       ]
     },
     nav: [
