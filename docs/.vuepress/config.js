@@ -26,13 +26,25 @@ module.exports = {
     },
     nav: [
       {
-        text: 'Apps',
+        text: 'Home',
+        link: 'https://fivefilters.org'
+      },
+      {
+        text: 'Docs',
         items: [
           {
             text: 'Full-Text RSS',
             link: '/full-text-rss'
           }
         ]
+      },
+      {
+        text: 'Forum',
+        link: 'htps://forum.fivefilters.org'
+      },
+      {
+        text: 'Your account',
+        link: 'https://member.fivefilters.org'
       }
     ]
   }
