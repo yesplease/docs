@@ -13,6 +13,12 @@ meta:
 
 <style>
   .hero h1, .hero p.description { display: none }
+  .content.custom {
+    text-align: center;
+  }
+  .content.custom li {
+    list-style: none;
+  }
 </style>
 
 # Get Started
