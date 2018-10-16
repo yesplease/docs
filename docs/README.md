@@ -21,8 +21,12 @@ meta:
 
 # Forum
 
-We answer questions on our forum at
+We answer questions on our community forum.
+
+* [Forum](https://forum.fivefilters.org)
 
 # Your account
 
-To check your account and download software you've purchased, p
+Check your account and download software you've purchased here.
+
+* [Your account](https://member.fivefilters.org)

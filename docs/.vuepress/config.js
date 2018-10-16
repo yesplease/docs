@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         text: 'Forum',
-        link: 'htps://forum.fivefilters.org'
+        link: 'https://forum.fivefilters.org'
       },
       {
         text: 'Your account',
