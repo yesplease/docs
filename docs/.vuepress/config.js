@@ -4,7 +4,7 @@ module.exports = {
       searchMaxSuggestions: 10
     }]
   ],
-  title: 'FiveFilters.org',
+  title: 'FiveFilters.org Documentation',
   description: 'Documentation', 
   themeConfig: {
     docsDir: 'docs',
