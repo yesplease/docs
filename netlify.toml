@@ -1,3 +1,21 @@
 [build]
   command = "yarn docs:build"
   publish = "docs/.vuepress/dist/"
+
+[[redirects]]
+  from = "/customer/en/portal/topics/62602-full-text-rss/articles"
+  to = "/full-text-rss"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/customer/en/portal/articles/225363-introduction"
+  to = "/full-text-rss"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/customer/en/portal/articles/247606-screenshots"
+  to = "/screenshots"
+  status = 301
+  force = false
