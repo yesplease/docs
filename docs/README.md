@@ -12,7 +12,7 @@ meta:
 ---
 
 <style>
-  .description { display: none }
+  .hero h1 { display: none }
 </style>
 
 # Get Started
