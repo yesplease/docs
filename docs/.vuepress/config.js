@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Netlify CMS + VuePress',
-  description: 'Netlify + VuePress',
+  title: 'FiveFilters.org',
+  description: 'Documentation',
   themeConfig: {
     docsDir: 'docs',
     repo: 'fivefilters/docs',
@@ -19,8 +19,8 @@ module.exports = {
     },
     nav: [
       {
-        text: 'Admin',
-        link: '/admin/#/',
+        text: 'Full-Text RSS',
+        link: '/full-text-rss',
       }
     ]
   }
