@@ -19,8 +19,13 @@ module.exports = {
     },
     nav: [
       {
-        text: 'Full-Text RSS',
-        link: '/full-text-rss',
+        text: 'Apps',
+        items: [
+          {
+            text: 'Full-Text RSS',
+            link: '/full-text-rss'
+          }
+        ]
       }
     ]
   }
