@@ -24,6 +24,7 @@ meta:
 # Get Started
 
 * [Full-Text RSS](/full-text-rss)
+* [PDF Newspaper](/pdf-newspaper)
 
 # Forum
 
