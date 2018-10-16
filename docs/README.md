@@ -5,7 +5,7 @@ actionText: Get Started →
 actionLink: #get-started
 features:
 - title: Markdown Editing 
-  details: Netlify's [CMS](https://example.org) provides a flexible Markdown Editor 
+  details: Netlify's <a href="test">test</a> provides a flexible Markdown Editor 
 - title: Asset Management 
   details: Easily upload images to your repo with an uploader 
 - title: Powerful Deployments
