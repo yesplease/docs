@@ -1,3 +1,6 @@
+---
+title: Full-Text RSS
+---
 
 # Introduction
 
@@ -13,7 +16,7 @@ A full-text feed is a standard web feed: essentially a list of the most recent a
 
 ## What is Full-Text RSS (the software)?
 
-Full-Text RSS (we may refer to it as FTR from now on) is a free and open source tool which can extract article content from web pages and convert partial feeds into full-text feeds.
+Full-Text RSS (we may refer to it as FTR from now on) is a [free](https://www.gnu.org/philosophy/free-sw.html) and open source tool which can extract article content from web pages and convert partial feeds into full-text feeds.
 
 At its heart, FTR is a content extraction tool. It uses web feeds as input and output because they are the most common feed format standards used on the web. So applications which already support feeds can make use of FTR without change.
 

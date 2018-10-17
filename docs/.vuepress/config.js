@@ -15,7 +15,8 @@ module.exports = {
     sidebar: {
 
       '/full-text-rss/': [
-        ''      /* /bar/ */
+        '',
+        'screenshots'
       ],
       
       '/': [
