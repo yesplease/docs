@@ -3,6 +3,12 @@
   publish = "docs/.vuepress/dist/"
 
 [[redirects]]
+  from = "/customer/portal/questions/*"
+  to = "http://fivefilters.org/redirect-to-forum.php?q=:splat"
+  status = 301
+  force = false
+
+[[redirects]]
   from = "/customer/en/portal/topics/62602-full-text-rss/articles"
   to = "/full-text-rss"
   status = 301
