@@ -29,13 +29,13 @@ If you use a news reader, you can use FTR to convert these partial feeds into fu
 
 Typically, you subscribe to a number of web feeds you have an interest in, using a news reading application (feed reader). Your feed reader then periodically checks those feeds for new items and pulls them in for you. Some of those feeds will contain the full contents of each article, allowing you to read the entire entry in your news reader. Some other feeds will contain partial content, with the expectation that you will visit the original site to read the full entry. Here's a sequence diagram showing showing what your feed reader will typically do when you subscribe to feeds from two web sites, Website 1 and Website 2:
 
-IMG1
+![sequence without Full-Text RSS](full-text-rss/feed-reader.png)
 
 Sequence diagram showing feed fetching without Full-Text RSS
 
 FTR is designed to act as a proxy for partial feeds. So rather than subscribing to the feed from Website 1 directly in your feed reader, you will first pass it to FTR and use the new feed URL it generates to subscribe to the feed. What happens when you subscribe to a feed in this way is shown in the sequence diagram below:
 
-IMG2
+![sequence without Full-Text RSS](full-text-rss/full-text-rss-sequence.png)
 
 Sequence diagram showing feed fetching with Full-Text RSS
 

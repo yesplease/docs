@@ -23,6 +23,8 @@ meta:
 
 # Get Started
 
+Documentation for our products.
+
 * [Full-Text RSS](/full-text-rss)
 * [PDF Newspaper](/pdf-newspaper)
 
@@ -34,6 +36,6 @@ We answer questions on our community forum.
 
 # Your account
 
-Check your account and download software you've purchased here.
+Check your account and download software you've purchased.
 
 * [Your account](https://member.fivefilters.org)
