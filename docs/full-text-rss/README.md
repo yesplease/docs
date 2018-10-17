@@ -1,5 +1,5 @@
 ---
-title: Full-Text RSS
+title: Full-Text RSS Intro
 ---
 
 # Introduction

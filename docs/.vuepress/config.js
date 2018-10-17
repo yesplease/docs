@@ -4,7 +4,7 @@ module.exports = {
       searchMaxSuggestions: 10
     }]
   ],
-  title: 'FiveFilters.org Documentation',
+  title: 'FiveFilters.org Docs',
   description: 'Documentation', 
   themeConfig: {
     docsDir: 'docs',
@@ -16,7 +16,8 @@ module.exports = {
 
       '/full-text-rss/': [
         '',
-        'screenshots'
+        'screenshots',
+        'requirements'
       ],
       
       '/': [
