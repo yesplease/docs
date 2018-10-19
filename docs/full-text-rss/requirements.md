@@ -4,7 +4,7 @@ title: System Requirements
 
 # System Requirements
 
-::: warning
+::: tip
 These are the system requirements for our self-hosted version of Full-Text RSS. If you'd rather let us manage the service, you can use our [hosted service](https://market.mashape.com/fivefilters/full-text-rss).
 :::
 
