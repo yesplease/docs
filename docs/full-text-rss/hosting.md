@@ -30,12 +30,12 @@ We have a script to set your system up with all the necessary components to get 
 1. Click 'Create'
 1. SSH into your newly created server using login details sent to your email
 1. From the command line, enter the following commands, one line at a time: 
-```
-apt-get update
-apt-get -y install puppet
-wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-18.04.pp
-puppet apply ubuntu-18.04.pp
-```
+    ```
+    apt-get update
+    apt-get -y install puppet
+    wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-18.04.pp
+    puppet apply ubuntu-18.04.pp
+    ```
 1. That last command may take some time as various components are installed. You should see output which looks something like this: [puppet output](https://bitbucket.org/fivefilters/hosting/src/master/puppet-output.txt)
 1. Apache should be up and running now. Test by visiting 
 `http://[ip-sent-to-you-by-hetzner]`
