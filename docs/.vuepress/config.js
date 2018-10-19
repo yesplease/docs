@@ -17,7 +17,8 @@ module.exports = {
       '/full-text-rss/': [
         '',
         'screenshots',
-        'requirements'
+        'requirements',
+        'hosting'
       ],
       
       '/': [
