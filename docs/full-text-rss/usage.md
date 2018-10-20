@@ -100,7 +100,7 @@ To extract article content from a web page and get a simple JSON response, use t
 When making HTTP requests, you can pass the following parameters to `extract.php` in a GET or POST request.
 
 ::: warning NOTE
-For many of these parameters, the configuration file will ultimately determine if and how they can be used.
+The configuration file will ultimately determine if and how many of these parameters can be used.
 :::
 
 <table width="100%" border="0" class="parameters table table-bordered">
