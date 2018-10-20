@@ -26,6 +26,7 @@ meta:
 Documentation for our products.
 
 * [Full-Text RSS](/full-text-rss)
+* [Push to Kindle](/push-to-kindle)
 * [PDF Newspaper](/pdf-newspaper)
 
 # Forum
