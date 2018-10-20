@@ -24,7 +24,8 @@ module.exports = {
         'code-example',
         'configure',
         'site-patterns',
-        'example-feeds'
+        'example-feeds',
+        'blocked-sites'
       ],
       
       '/': [
