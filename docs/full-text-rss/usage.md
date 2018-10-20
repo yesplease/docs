@@ -48,7 +48,12 @@ Using the form is the simplest way to generate a Full-Text RSS URL, but you can 
 
 These parameters are to be appended on to the base URL. The base URL is where you installed Full-Text RSS, e.g. `http://example.org/full-text-rss/`. Because this will differ from installation to installation, in this guide we'll simply refer to the endpoints using the filenames only: `extract.php` and `makefulltextfeed.php`.
 
-This page describes the two endpoints offered by Full-Text RSS: <a href="#article-extraction">Article Extraction</a> and <a href="#feed-conversion">Feed Conversion</a>. If you've restricted access to Full-Text RSS, the final section on <a href="#api-keys">API keys</a> will tell you how to pass your key along in the request.
+This page describes the two endpoints offered by Full-Text RSS: 
+
+1. [Article Extraction](#article-extraction)
+2. [Feed Conversion](#feed-conversion)
+
+If you've restricted access to Full-Text RSS, the final section on <a href="#api-keys">API keys</a> will tell you how to pass your key along in the request.
 
 ::: tip NOTE ON ENCODING
 If you're constructing URLs without using the form, make sure you URL encode the parameter values (anything after the '=' and before the '&'). In PHP the function to use is `urlencode()`. If you're doing it by hand, you can paste the parameter values into [an web-based encoder](http://meyerweb.com/eric/tools/dencoder/) and click 'Encode' to get the encoded the value.
