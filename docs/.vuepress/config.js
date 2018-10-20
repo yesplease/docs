@@ -23,7 +23,8 @@ module.exports = {
         'usage',
         'code-example',
         'configure',
-        'site-patterns'
+        'site-patterns',
+        'example-feeds'
       ],
       
       '/': [
