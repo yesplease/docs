@@ -10,17 +10,17 @@ Our [Installation](/full-text-rss/installation.html) page explains how to upload
 
 ## Hosted plans
 
-We offer [free and premium hosted plans](http://fivefilters.org/content-only/#section-pricing) for news enthusiasts. As well as [hosted plans for developers](https://market.mashape.com/fivefilters/full-text-rss). These are the best options if you don't want to manage your own hosting account.
+We offer [hosted plans for developers](https://market.mashape.com/fivefilters/full-text-rss) as well as [hosted plans for news enthusiasts](http://fivefilters.org/content-only/#section-pricing). These are the best options if you don't want to manage your own hosting account.
 
 ## Self hosting
 
 ::: tip QUICK START
-If you're a customer, try our Easy Install steps when you login via the [member page](https://member.fivefilters.org/). The steps and script there will set up the server **and** install Full-Text RSS for you on your VPS server. It's the quickest way to get started with Full-Text RSS.
+If you're a customer, try our Easy Install steps when you login via the [member page](https://member.fivefilters.org/). The steps and script there will set up the server **and** install Full-Text RSS for you on your VPS server. It's the quickest way to get started.
 :::
 
 While Full-Text RSS can be used with most hosting accounts, we recommend running it on a VPS with our server initialisation script which will install all the necessary components.
 
-We have a script to set your system up with all the necessary components. The steps will attempt to install (via Puppet) Apache, PHP and the extensions required to run Full-Text RSS and the rest of our PHP software.
+We have a script to set your system up with all the necessary components. The steps will install (via Puppet) Apache, PHP and the extensions required to run Full-Text RSS and the rest of our PHP software.
 
 ::: warning NOTE
 We recommend using your newly set up VPS server only for Full-Text RSS. But remember, with a VPS, system security and updates will be your responsibility.
