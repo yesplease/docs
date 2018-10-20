@@ -20,7 +20,8 @@ module.exports = {
         'requirements',
         'hosting',
         'installation',
-        'usage'
+        'usage',
+        'code-example'
       ],
       
       '/': [
