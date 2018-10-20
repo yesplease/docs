@@ -67,7 +67,7 @@ When constructing URLs without using the form, make sure you URL-encode the para
     color: #fff;
     padding: 10px; 
     border-radius: 4px;
-    font-size:12px;
+    font-size: 12px;
 }
 .ERR             { color: #FF0000; font-weight: bold; }
 .FUNC            { color: #FF0000; font-weight: bold; }
