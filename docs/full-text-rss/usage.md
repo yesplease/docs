@@ -10,7 +10,7 @@ In the URL field, enter the URL of a partial feed or web page and click ‘Creat
 
 If you're a developer and need to integrate Full-Text RSS in your application, we have a simple [code example](/full-text-rss/code-example.html) to give you an idea of how it can be used.
 
-## Form Options
+## Form Fields
 
 In addition to the URL, you can also specify a number of other options in the form:
 
@@ -44,11 +44,11 @@ Check the box to see what's happening behind the scenes.
 
 ## Query String Parameters
 
-Using the form is the simplest way to create a Full-Text RSS URL, but you can also construct one yourself. The form fields above are turned into query string parameters when you submit the form. Let's look at those parameters here, and a few more that are not presented on the form.
+Using the form is the simplest way to generate a Full-Text RSS URL, but you can also construct one yourself. The form fields above are turned into query string parameters when you submit the form. Let's look at those parameters here, and a few more that are not presented on the form.
 
-These parameters are to be appended on to the base URL. The base URL is where you installed Full-Text RSS, e.g. `http://example.org/full-text-rss/makefulltextfeed.php`.
+These parameters are to be appended on to the base URL. The base URL is where you installed Full-Text RSS, e.g. `http://example.org/full-text-rss/`. Because this will differ from installation to installation, in this guide we'll simply refer to the endpoints using the filenames only: `extract.php` and `makefulltextfeed.php`.
 
-These parameters can be combined in the URL.
+This page describes the two endpoints offered by Full-Text RSS: <a href="#article-extraction">Article Extraction</a> and <a href="#feed-conversion">Feed Conversion</a>. If you've restricted access to Full-Text RSS, the final section on <a href="#api-keys">API keys</a> will tell you how to pass your key along in the request.
 
 ::: tip NOTE ON ENCODING
 If you're constructing URLs without using the form, make sure you URL encode the parameter values (anything after the '=' and before the '&'). In PHP the function to use is `urlencode()`. If you're doing it by hand, you can paste the parameter values into [an web-based encoder](http://meyerweb.com/eric/tools/dencoder/) and click 'Encode' to get the encoded the value.
@@ -62,6 +62,7 @@ If you're constructing URLs without using the form, make sure you URL encode the
     color: #fff;
     padding: 10px; 
     border-radius: 4px;
+    font-size:12px;
 }
 .ERR             { color: #FF0000; font-weight: bold; }
 .FUNC            { color: #FF0000; font-weight: bold; }
@@ -81,19 +82,22 @@ table.OBJ        { background-color: #22353C; }
 table.ARRAY      { background-color: #252C47; }
 </style>
 
-<p>This page describes the two endpoints offered by Full-Text RSS: <a href="#article-extraction">Article Extraction</a> and <a href="#feed-conversion">Feed Conversion</a>. If you've restricted access to Full-Text RSS, the final section on <a href="#api-keys">API keys</a> will tell you how to pass your key along in the request.</p>
+## <a name="article-extraction" />1. Article Extraction
 
-<hr />
-<h3 id="article-extraction">1. Article Extraction</h3>
-<p>To extract article content from a web page and get a simple JSON response, use the following endpoint:</p>
-<ul>
-    <li style="font-family: monospace;"><script type="text/javascript">document.write(baseUrl);</script>/extract.php?url=<strong>[url]</strong></li>
-</ul>
+To extract article content from a web page and get a simple JSON response, use the following endpoint:
 
-## Request Parameters
+```
+/extract.php?url=[url]
+```
 
-<p>When making HTTP requests, you can pass the following parameters to <tt>extract.php</tt> in a GET or POST request.</p>
-<p>Note: for many of these parameters, the configuration file will ultimately determine if and how they can be used.</p>
+### Request Parameters
+
+When making HTTP requests, you can pass the following parameters to `extract.php` in a GET or POST request.
+
+::: warning NOTE
+For many of these parameters, the configuration file will ultimately determine if and how they can be used.
+:::
+
 <table width="100%" border="0" class="parameters table table-bordered">
     <thead>
     <tr style="background-color: #ddd">
@@ -132,7 +136,7 @@ table.ARRAY      { background-color: #252C47; }
         <td>xss</td>
         <td><tt>0</tt>, <tt>1</tt> (default)</td>
         <td><p>Use this to enable/disable XSS filtering. It is enabled by default, but if your application/framework/CMS already filters HTML for XSS vulnerabilities, you can disable XSS filtering here.</p>
-<p>If enabled, we'll pass retrieved HTML content through htmLawed (safe flag on and style attributes denied). Note: when enabled this will remove certain elements you may want to preserve, such as iframes.</p></td>
+        <p>If enabled, we'll pass retrieved HTML content through htmLawed (safe flag on and style attributes denied). Note: when enabled this will remove certain elements you may want to preserve, such as iframes.</p></td>
     </tr>
     <tr>
         <td>lang</td>
@@ -173,31 +177,36 @@ table.ARRAY      { background-color: #252C47; }
 </table>
 
 
-## Response (example)
+### Response (example)
 
-<p>Simple JSON output containing extracted article title, content, and more. It was produced from the following input URL: http://www.truthdig.com/report/print/make_america_ungovernable_20170205</p>
+Simple JSON output containing extracted article title, content, and more. It was produced from the following input URL: `http://www.truthdig.com/report/print/make_america_ungovernable_20170205`
+
 <!-- Generated by http://chris.photobooks.com/json/default.htm -->
 
 <output style="display: block;" for="jsonInput jsonStrict jsonEval json2HTML json2JSON jsonTrunc jsonDate jsonData jsonSpace" class="jsonOutput PRETTY"><span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"title": <span class="STRING">"Make America Ungovernable"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"excerpt": <span class="STRING">"By Chris Hedges Mr. Fish / Truthdig Donald Trump’s regime is rapidl…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"date": <span class="STRING">"2017-02-05T23:34:57+00:00"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"author": <span class="NULL">null</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"language": <span class="STRING">"en"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://www.truthdig.com/report/item/make_america_ungovernable_20170…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"effective_url": <span class="STRING">"http://www.truthdig.com/report/print/make_america_ungovernable_2017…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"domain": <span class="STRING">"truthdig.com"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"word_count": <span class="NUMBER">2284</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"og_url": <span class="STRING">"http://www.truthdig.com/report/print/make_america_ungovernable_2017…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"og_title": <span class="STRING">"Make America Ungovernable: Chris Hedges"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"og_description": <span class="STRING">"The window to overthrow the Trump regime is rapidly closing. We mus…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"og_image": <span class="NULL">null</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"og_type": <span class="STRING">"article"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"twitter_card": <span class="NULL">null</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"twitter_site": <span class="STRING">"@truthdig"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"twitter_creator": <span class="STRING">"@truthdig"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"twitter_image": <span class="NULL">null</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"twitter_title": <span class="STRING">"Make America Ungovernable | Truthdig: Drilling Beneath the Headline…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"twitter_description": <span class="STRING">"The window to overthrow the Trump regime is rapidly closing. We mus…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"content": <span class="STRING">"&lt;h4 class="date"&gt;Posted on Feb 5&lt;/h4&gt;…"</span></span><br>}</span></output>
 
-<p>Note: For brevity the output above is truncated.</p>
-
-<hr />
+Note: For brevity the output above is truncated.
 
 ## <a name="feed-conversion" />2. Feed Conversion
 
-<p>To transform a partial feed to a full-text feed, pass the URL (<a href="http://meyerweb.com/eric/tools/dencoder/">encoded</a>) in the querystring to the following URL:</p>
-<ul>
-    <li style="font-family: monospace;"><script type="text/javascript">document.write(baseUrl);</script>/makefulltextfeed.php?url=<strong>[url]</strong></li>
-</ul>
+To transform a partial feed to a full-text feed, pass the URL ([encoded](http://meyerweb.com/eric/tools/dencoder/)) in the querystring to the following URL:
 
-<p>All the parameters in the form at the top of this page can be passed in this way. Examine the URL in the address bar after you click 'Create Feed' to see the values.</p>
+```
+makefulltextfeed.php?url=[url]
+```
+
+All the parameters in the form at the top of this page can be passed in this way. Examine the URL in the address bar after you click 'Create Feed' to see the values.
 
 ### Request Parameters
 
-<p>When making HTTP requests, you can pass the following parameters to <tt>makefulltextfeed.php</tt> in a GET request. Most of these parameters have default values suitable for news enthusiasts who simply want to subscribe to a full-text feed in their news reading application. If that's what you're doing, you can safely ignore the details here. For developers, or others who need more control over the output produced by Full-Text RSS, this section should give you an idea of what you can do.</p>
-<p>We do not provide form fields for all of these parameters, but you can modify the URL in your browser after clicking 'Create Feed' to use them.</p>
-<p>Note: for many of these parameters, the configuration file will ultimately determine if and how they can be used.</p>
+When making HTTP requests, you can pass the following parameters to `makefulltextfeed.php` in a GET request. Most of these parameters have default values suitable for news enthusiasts who simply want to subscribe to a full-text feed in their news reading application. If that's what you're doing, you can safely ignore the details here. For developers, or others who need more control over the output produced by Full-Text RSS, this section should give you an idea of what you can do.
+
+We do not provide form fields for all of these parameters, but you can modify the URL in your browser after clicking 'Create Feed' to use them.
+
+::: warning NOTE
+For many of these parameters, the configuration file will ultimately determine if and how they can be used.
+:::
+
 <table width="100%" border="0" class="parameters table table-bordered">
     <thead>
     <tr style="background-color: #ddd">
@@ -299,7 +308,7 @@ table.ARRAY      { background-color: #252C47; }
     </tbody>
 </table>
 
-<p><strong>Feed-only parameters</strong> &mdash; These parameters only apply to web feeds. They have no effect when the input URL points to a web page.</p>
+**Feed-only parameters** &mdash; These parameters only apply to web feeds. They have no effect when the input URL points to a web page.
 
 <table width="100%" border="0" class="parameters table table-bordered">
     <thead>
@@ -330,17 +339,19 @@ table.ARRAY      { background-color: #252C47; }
 
 ### Response (example)
 
-<p>JSON output produced for the BBC feed http://feeds.bbci.co.uk/news/rss.xml. You can also request regular RSS.</p>
+JSON output produced for the BBC feed `http://feeds.bbci.co.uk/news/rss.xml`. You can also request regular RSS.
+
 <!-- Generated by http://chris.photobooks.com/json/default.htm -->
 <output style="display: block;" for="jsonInput jsonStrict jsonEval json2HTML json2JSON jsonTrunc jsonDate jsonData jsonSpace" class="jsonOutput PRETTY"><span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;<span>"rss": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"@attributes": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"version": <span class="STRING">"2.0"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"channel": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"title": <span class="STRING">"BBC News - Home"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"link": <span class="STRING">"http://www.bbc.co.uk/news/#sa-ns_mchannel=rss&amp;amp;ns_source=PublicR…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"description": <span class="STRING">"The latest stories from the Home section of the BBC News web site."</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"ttl": <span class="NUMBER">15</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"image": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"title": <span class="STRING">"BBC News - Home"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"link": <span class="STRING">"http://www.bbc.co.uk/news/#sa-ns_mchannel=rss&amp;amp;ns_source=PublicR…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"item": <span class="ARRAY">[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"title": <span class="STRING">"Russia's Putin visits annexed Crimea"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"link": <span class="STRING">"http://www.bbc.co.uk/news/world-europe-27344029#sa-ns_mchannel=rss&amp;…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"guid": <span class="STRING">"http://www.bbc.co.uk/news/world-europe-27344029#sa-ns_mchannel=rss&amp;…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"description": <span class="STRING">"President Putin: \"[Crimeans have] proved their loyalty to a histor…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"content_encoded": <span class="STRING">"&lt;!-- Adding hypertab --&gt;&amp;#13;\n&amp;#13;\n&amp;#13;\n&lt;!-- end of hypertab -…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"pubDate": <span class="STRING">"Fri, 09 May 2014 15:02:04 +0000"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_language": <span class="STRING">"en-gb"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_format": <span class="STRING">"text/html"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_identifier": <span class="STRING">"http://www.bbc.co.uk/news/world-europe-27344029"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"media_thumbnail": <span class="ARRAY">[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"@attributes": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://news.bbcimg.co.uk/media/images/74751000/jpg/_74751301_ycst2i…"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"@attributes": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://news.bbcimg.co.uk/media/images/74751000/jpg/_74751302_ycst2i…"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"title": <span class="STRING">"Harris 'assaulted daughter's friend'"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"link": <span class="STRING">"http://www.bbc.co.uk/news/uk-27340134#sa-ns_mchannel=rss&amp;ns_source=…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"guid": <span class="STRING">"http://www.bbc.co.uk/news/uk-27340134#sa-ns_mchannel=rss&amp;amp;ns_sou…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"description": <span class="STRING">"Rolf Harris arrives at court flanked by his wife and daughter Rolf …"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"content_encoded": <span class="STRING">"&lt;!--  Embedding the video player --&gt;&amp;#13;\n&lt;!--  This is the embedd…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"pubDate": <span class="STRING">"Fri, 09 May 2014 15:21:52 +0000"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_language": <span class="STRING">"en-gb"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_format": <span class="STRING">"text/html"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_identifier": <span class="STRING">"http://www.bbc.co.uk/news/uk-27340134"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"media_thumbnail": <span class="ARRAY">[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"@attributes": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://news.bbcimg.co.uk/media/images/74740000/jpg/_74740642_hi0221…"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"@attributes": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://news.bbcimg.co.uk/media/images/74740000/jpg/_74740643_hi0221…"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"title": <span class="STRING">"Nigeria 'ignored' school warning"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"link": <span class="STRING">"http://www.bbc.co.uk/news/world-africa-27344863#sa-ns_mchannel=rss&amp;…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"guid": <span class="STRING">"http://www.bbc.co.uk/news/world-africa-27344863#sa-ns_mchannel=rss&amp;…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"description": <span class="STRING">"Nigeria's military had advance warning of the attack on a school at…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"content_encoded": <span class="STRING">"&lt;div class=\"caption full-width\"&gt;&amp;#13;\n  &lt;img src=\"http://news.b…"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"pubDate": <span class="STRING">"Fri, 09 May 2014 15:48:34 +0000"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_language": <span class="STRING">"en-gb"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_format": <span class="STRING">"text/html"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"dc_identifier": <span class="STRING">"http://www.bbc.co.uk/news/world-africa-27344863"</span></span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"media_thumbnail": <span class="ARRAY">[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"@attributes": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://news.bbcimg.co.uk/media/images/74749000/jpg/_74749855_747495…"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"@attributes": <span class="OBJ">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"url": <span class="STRING">"http://news.bbcimg.co.uk/media/images/74749000/jpg/_74749856_747495…"</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span><br>}</span></output>	
 <p>Note: For brevity the output above is truncated.</p>
 
-<hr />
-
 ## <a name="api-keys"/> API Keys
 
-<p>To restrict access to your copy of Full-Text RSS, you can specify API keys in the config file.</p>
-<p>Note: Full-text feeds produced by Full-Text RSS are intended to be publically accessible to work with feed readers. As such, the API key should not appear in the final URL for feeds.</p>
+To restrict access to your copy of Full-Text RSS, you can specify API keys in the config file.
+
+::: warning NOTE
+Feeds produced by Full-Text RSS are intended to be publically accessible to work with feed readers. As such, the API key should not appear in the final URL for feeds.
+:::
 
 <table width="100%" border="0" class="parameters table table-bordered">
     <thead>
