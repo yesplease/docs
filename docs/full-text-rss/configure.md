@@ -71,7 +71,7 @@ If you'd like to enable caching, we recommend you do it after you've configured 
 
 1. Ensure the cache folder and its 2 sub folders are writable. (You might need to change the permissions of these folders to 777 through your FTP client.)
 1. In custom_config.php, make sure you set caching to true: 
-    ```
+    ``` php
     $options->caching = true;
     ```
 
