@@ -22,7 +22,8 @@ module.exports = {
         'installation',
         'usage',
         'code-example',
-        'configure'
+        'configure',
+        'site-patterns'
       ],
       
       '/': [
