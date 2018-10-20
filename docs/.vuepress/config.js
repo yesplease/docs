@@ -21,7 +21,8 @@ module.exports = {
         'hosting',
         'installation',
         'usage',
-        'code-example'
+        'code-example',
+        'configure'
       ],
       
       '/': [
