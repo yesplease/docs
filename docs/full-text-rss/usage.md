@@ -209,7 +209,7 @@ When making HTTP requests, you can pass the following parameters to `makefulltex
 We do not provide form fields for all of these parameters, but you can modify the URL in your browser after clicking 'Create Feed' to use them.
 
 ::: warning NOTE
-For many of these parameters, the configuration file will ultimately determine if and how they can be used.
+The configuration file will ultimately determine if and how many of these parameters can be used.
 :::
 
 <table width="100%" border="0" class="parameters table table-bordered">
