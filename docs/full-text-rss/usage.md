@@ -56,7 +56,7 @@ This page describes the two endpoints offered by Full-Text RSS:
 If you've restricted access to Full-Text RSS, the final section on <a href="#api-keys">API keys</a> will tell you how to pass your key along in the request.
 
 ::: tip NOTE ON ENCODING
-If you're constructing URLs without using the form, make sure you URL encode the parameter values (anything after the '=' and before the '&'). In PHP the function to use is `urlencode()`. If you're doing it by hand, you can paste the parameter values into [an web-based encoder](http://meyerweb.com/eric/tools/dencoder/) and click 'Encode' to get the encoded the value.
+When constructing URLs without using the form, make sure you URL-encode the parameter values (anything after the '=' and before the '&'). In PHP the function to use is `urlencode()`. If you're doing it by hand, you can paste the parameter values into a [web-based encoder](http://meyerweb.com/eric/tools/dencoder/) and click 'Encode' to get the encoded value.
 :::
 
 <style>
