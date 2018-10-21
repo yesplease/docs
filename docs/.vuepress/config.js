@@ -31,7 +31,8 @@ module.exports = {
       '/push-to-kindle/': [
         'email-address',
         'kindle-addresses',
-        'personal-documents-features'
+        'personal-documents-features',
+        'troubleshooting'
       ],
 
       '/pdf-newspaper/': [
