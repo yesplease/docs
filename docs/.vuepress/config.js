@@ -31,7 +31,8 @@ module.exports = {
       '/pdf-newspaper/': [
         'screenshots',
         'installation',
-        'configure'
+        'configure',
+        'example-feeds'
       ],
 
       '/': [
