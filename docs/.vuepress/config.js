@@ -28,6 +28,12 @@ module.exports = {
         'blocked-sites'
       ],
 
+      '/push-to-kindle/': [
+        'email-address',
+        'kindle-addresses',
+        'personal-documents-features'
+      ],
+
       '/pdf-newspaper/': [
         'screenshots',
         'installing',
