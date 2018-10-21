@@ -27,7 +27,11 @@ module.exports = {
         'example-feeds',
         'blocked-sites'
       ],
-      
+
+      '/pdf-newspaper/': [
+        'screenshots'
+      ],
+
       '/': [
         ''
       ]
