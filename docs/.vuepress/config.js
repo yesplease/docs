@@ -19,7 +19,7 @@ module.exports = {
         'screenshots',
         'requirements',
         'hosting',
-        'installation',
+        'installing',
         'usage',
         'code-example',
         'configure',
@@ -30,7 +30,7 @@ module.exports = {
 
       '/pdf-newspaper/': [
         'screenshots',
-        'installation',
+        'installing',
         'configure',
         'example-feeds'
       ],

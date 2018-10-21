@@ -75,7 +75,7 @@
 
 [[redirects]]
   from = "/customer/en/portal/articles/223127-suggested-feeds-and-articles"
-  to = "/full-text-rss/suggested-feeds-articles"
+  to = "/full-text-rss/example-feeds"
   status = 301
   force = false
 
@@ -135,7 +135,7 @@
 
 [[redirects]]
   from = "/customer/en/portal/articles/246800-suggested-feeds-and-articles"
-  to = "/pdf-newspaper/suggested-feeds-articles"
+  to = "/pdf-newspaper/example-feeds"
   status = 301
   force = false
 
