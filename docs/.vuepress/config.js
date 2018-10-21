@@ -29,7 +29,8 @@ module.exports = {
       ],
 
       '/pdf-newspaper/': [
-        'screenshots'
+        'screenshots',
+        'installation'
       ],
 
       '/': [
