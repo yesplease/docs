@@ -30,7 +30,8 @@ module.exports = {
 
       '/pdf-newspaper/': [
         'screenshots',
-        'installation'
+        'installation',
+        'configure'
       ],
 
       '/': [
