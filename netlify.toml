@@ -39,121 +39,121 @@
 
 [[redirects]]
   from = "/customer/portal/articles/247606-screenshots"
-  to = "/full-text-rss/screenshots"
+  to = "/full-text-rss/screenshots.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/247606-screenshots"
-  to = "/full-text-rss/screenshots"
+  to = "/full-text-rss/screenshots.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/226648-system-requirements"
-  to = "/full-text-rss/requirements"
+  to = "/full-text-rss/requirements.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/226648-system-requirements"
-  to = "/full-text-rss/requirements"
+  to = "/full-text-rss/requirements.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/1143210-hosting"
-  to = "/full-text-rss/hosting"
+  to = "/full-text-rss/hosting.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/1143210-hosting"
-  to = "/full-text-rss/hosting"
+  to = "/full-text-rss/hosting.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/226655-installing-or-updating"
-  to = "/full-text-rss/installing"
+  to = "/full-text-rss/installing.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/226655-installing-or-updating"
-  to = "/full-text-rss/installing"
+  to = "/full-text-rss/installing.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/226660-usage-and-request-parameters"
-  to = "/full-text-rss/usage"
+  to = "/full-text-rss/usage.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/226660-usage-and-request-parameters"
-  to = "/full-text-rss/usage"
+  to = "/full-text-rss/usage.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/1066742-code-example"
-  to = "/full-text-rss/code-example"
+  to = "/full-text-rss/code-example.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/1066742-code-example"
-  to = "/full-text-rss/code-example"
+  to = "/full-text-rss/code-example.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/223410-configure"
-  to = "/full-text-rss/configure"
+  to = "/full-text-rss/configure.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/223410-configure"
-  to = "/full-text-rss/configure"
+  to = "/full-text-rss/configure.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/223153-site-patterns"
-  to = "/full-text-rss/site-patterns"
+  to = "/full-text-rss/site-patterns.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/223153-site-patterns"
-  to = "/full-text-rss/site-patterns"
+  to = "/full-text-rss/site-patterns.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/223127-suggested-feeds-and-articles"
-  to = "/full-text-rss/example-feeds"
+  to = "/full-text-rss/example-feeds.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/223127-suggested-feeds-and-articles"
-  to = "/full-text-rss/example-feeds"
+  to = "/full-text-rss/example-feeds.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/2338335-blocked-sites"
-  to = "/full-text-rss/blocked-sites"
+  to = "/full-text-rss/blocked-sites.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/2338335-blocked-sites"
-  to = "/full-text-rss/blocked-sites"
+  to = "/full-text-rss/blocked-sites.html"
   status = 301
   force = false
 
@@ -174,49 +174,49 @@
 
 [[redirects]]
   from = "/customer/portal/articles/178337-kindle-e-mail-address"
-  to = "/push-to-kindle/email-address"
+  to = "/push-to-kindle/email-address.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/178337-kindle-e-mail-address"
-  to = "/push-to-kindle/email-address"
+  to = "/push-to-kindle/email-address.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/233766-difference-between-kindle-com-and-free-kindle-com"
-  to = "/push-to-kindle/kindle-addresses"
+  to = "/push-to-kindle/kindle-addresses.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/233766-difference-between-kindle-com-and-free-kindle-com"
-  to = "/push-to-kindle/kindle-addresses"
+  to = "/push-to-kindle/kindle-addresses.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/270479-amazon-new-kindle-personal-documents-features"
-  to = "/push-to-kindle/personal-documents-features"
+  to = "/push-to-kindle/personal-documents-features.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/270479-amazon-new-kindle-personal-documents-features"
-  to = "/push-to-kindle/personal-documents-features"
+  to = "/push-to-kindle/personal-documents-features.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/1292971-troubleshooting"
-  to = "/push-to-kindle/troubleshooting"
+  to = "/push-to-kindle/troubleshooting.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/1292971-troubleshooting"
-  to = "/push-to-kindle/troubleshooting"
+  to = "/push-to-kindle/troubleshooting.html"
   status = 301
   force = false
 
@@ -237,49 +237,49 @@
 
 [[redirects]]
   from = "/customer/portal/articles/247600-screenshots"
-  to = "/pdf-newspaper/screenshots"
+  to = "/pdf-newspaper/screenshots.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/247600-screenshots"
-  to = "/pdf-newspaper/screenshots"
+  to = "/pdf-newspaper/screenshots.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/247598-installing"
-  to = "/pdf-newspaper/installing"
+  to = "/pdf-newspaper/installing.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/247598-installing"
-  to = "/pdf-newspaper/installing"
+  to = "/pdf-newspaper/installing.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/246937-configure"
-  to = "/pdf-newspaper/configure"
+  to = "/pdf-newspaper/configure.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/246937-configure"
-  to = "/pdf-newspaper/configure"
+  to = "/pdf-newspaper/configure.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/portal/articles/246800-suggested-feeds-and-articles"
-  to = "/pdf-newspaper/example-feeds"
+  to = "/pdf-newspaper/example-feeds.html"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/246800-suggested-feeds-and-articles"
-  to = "/pdf-newspaper/example-feeds"
+  to = "/pdf-newspaper/example-feeds.html"
   status = 301
   force = false
 
