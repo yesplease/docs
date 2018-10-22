@@ -122,6 +122,12 @@
 # PDF Newspaper
 
 [[redirects]]
+  from = "/customer/en/portal/topics/111989-pdf-newspaper/articles/"
+  to = "/pdf-newspaper/"
+  status = 301
+  force = false
+
+[[redirects]]
   from = "/customer/en/portal/articles/247600-screenshots"
   to = "/pdf-newspaper/screenshots"
   status = 301
