@@ -2,6 +2,10 @@
 title: PDF Newspaper Intro
 ---
 
+<style>
+    img { border: 1px solid #222 }
+</style>
+
 # Introduction
 
 [PDF Newspaper](http://pdf.fivefilters.org) lets you create printable versions of web articles and news feeds. PDF Newspaper can produce a 2-column A4/Letter PDF, a single-column A5 PDF, or an editable HTML version linked to a print stylesheet.
