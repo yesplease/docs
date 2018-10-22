@@ -15,13 +15,13 @@
 
 [[redirects]]
   from = "/customer/en/portal/topics/62602-full-text-rss/articles"
-  to = "/full-text-rss"
+  to = "/full-text-rss/"
   status = 301
   force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/225363-introduction"
-  to = "/full-text-rss"
+  to = "/full-text-rss/"
   status = 301
   force = false
 
@@ -87,6 +87,12 @@
 
 
 # Push to Kindle
+
+[[redirects]]
+  from = "/customer/portal/topics/67288-push-to-kindle/articles/"
+  to = "/push-to-kindle/"
+  status = 301
+  force = false
 
 [[redirects]]
   from = "/customer/en/portal/articles/178337-kindle-e-mail-address"
