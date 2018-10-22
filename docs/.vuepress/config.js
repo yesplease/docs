@@ -58,15 +58,15 @@ module.exports = {
         items: [
           {
             text: 'Full-Text RSS',
-            link: '/full-text-rss'
+            link: '/full-text-rss/'
           },
           {
             text: 'Push to Kindle',
-            link: '/push-to-kindle'
+            link: '/push-to-kindle/'
           },
           {
             text: 'PDF Newspaper',
-            link: '/pdf-newspaper'
+            link: '/pdf-newspaper/'
           },
         ]
       },
