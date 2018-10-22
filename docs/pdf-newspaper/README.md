@@ -3,7 +3,7 @@ title: PDF Newspaper Intro
 ---
 
 <style>
-    img { border: 1px solid #222 }
+    table img { border: 1px solid #222 }
 </style>
 
 # Introduction
