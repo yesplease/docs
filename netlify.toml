@@ -68,6 +68,12 @@
   force = false
 
 [[redirects]]
+  from = "/customer/portal/articles/223153-site-patterns"
+  to = "/full-text-rss/site-patterns"
+  status = 301
+  force = false
+
+[[redirects]]
   from = "/customer/en/portal/articles/223153-site-patterns"
   to = "/full-text-rss/site-patterns"
   status = 301
