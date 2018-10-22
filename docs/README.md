@@ -40,3 +40,7 @@ We answer questions on our community forum.
 Check your account and download software you've purchased.
 
 * [Your account](https://member.fivefilters.org)
+
+# Contact us
+
+Any questions? E-mail us: [help@fivefilters.org](mailto:help@fivefilters.org).
