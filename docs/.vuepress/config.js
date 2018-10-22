@@ -29,6 +29,7 @@ module.exports = {
       ],
 
       '/push-to-kindle/': [
+        '',
         'email-address',
         'kindle-addresses',
         'personal-documents-features',
@@ -36,6 +37,7 @@ module.exports = {
       ],
 
       '/pdf-newspaper/': [
+        '',
         'screenshots',
         'installing',
         'configure',
@@ -57,7 +59,15 @@ module.exports = {
           {
             text: 'Full-Text RSS',
             link: '/full-text-rss'
-          }
+          },
+          {
+            text: 'Push to Kindle',
+            link: '/push-to-kindle'
+          },
+          {
+            text: 'PDF Newspaper',
+            link: '/pdf-newspaper'
+          },
         ]
       },
       {
