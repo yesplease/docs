@@ -221,6 +221,19 @@ find_string: <p />
 replace_string: <br /><br />
 ```
 
+### http_header([header name]): [header value]
+
+Send additional HTTP headers for requests to this site.
+
+**Examples**
+```
+# Appear to be an iPad
+http_header(User-agent): Mozilla/5.0 (iPad; CPU OS 12_0_1 like Mac OS X)
+
+# Skip GDPR tracking wall
+http_header(Cookie): euConsent=true
+```
+
 <!--
 ### parser: [string]
 
