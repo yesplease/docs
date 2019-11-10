@@ -93,6 +93,6 @@ Open the app or device and it should appear in your library. (If it doesn't, mak
 If you have multiple Kindle devices (e.g. the Kindle app on your phone and a Kindle Paperwhite) registered to the same Amazon account, you can use whichever Send-to-Kindle address you like. Your Amazon Kindle library is shared between devices, so you can access the same article from more than one device.
 :::
 
-::: warning: Kindle with 3G/4G support
+::: warning Kindle with 3G/4G support
 If you own a Kindle e-ink device with 3G/4G support, Amazon might charge you to receive articles delivered over 3G/4G. If you'd like to avoid these charges, you can send your articles to your Send-to-Kindle email address with the @kindle.com ending changed to @free.kindle.com (you can set this in Push to Kindle). Amazon will then only deliver it for free over the Wi-Fi network. If you have a Kindle with only Wi-Fi support, you can send to either @kindle.com or @free.kindle.com and you will not be charged by Amazon.
 :::
