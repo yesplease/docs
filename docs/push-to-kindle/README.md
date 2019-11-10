@@ -10,8 +10,6 @@ In addition to letting you buy e-books, Amazon also lets you send documents to y
 
 This guide will show you how to send web articles you come across to your Kindle account to be read later.
 
----
-
 ## Preparation
 
 To send articles to your Kindle account you will need a browser extension. In this guide we'll show you how to use our browser extension Push to Kindle.
@@ -63,8 +61,6 @@ To avoid spam, Amazon requires all documents sent to your Send-to-Kindle address
 
 ![](/images/push-to-kindle/add-approved-email.png)
 
----
-
 ## Sending articles to your Kindle
 
 Now you're ready to start sending articles you want to read to your Kindle.
@@ -86,8 +82,6 @@ After a few minutes, your article will be ready to read on your Kindle.
 ### 4. Enjoy Reading on your Kindle
 
 Open the app or device and it should appear in your library. (If it doesn't, make sure your device is connected to Wi-Fi and then tap 'Sync' from the menu.)
-
----
 
 ::: tip Multiple Kindle devices
 If you have multiple Kindle devices (e.g. the Kindle app on your phone and a Kindle Paperwhite) registered to the same Amazon account, you can use whichever Send-to-Kindle address you like. Your Amazon Kindle library is shared between devices, so you can access the same article from more than one device.
