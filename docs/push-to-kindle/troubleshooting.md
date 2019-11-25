@@ -34,3 +34,15 @@ If the address you're **sending to** ends in @free.kindle.com and is associated 
 ## 4. Is the send from address listed in your 'Approved Personal Document E-Mail List'
 
 Amazon only accepts articles to your Kindle account if they arrive from an address in your 'approved' list. So check that the address you're **sending from** appears in this list - and add it if it doesn't. We have instructions on how to do this on the [e-mail address page](/push-to-kindle/email-address.html).
+
+## 5. Check your spam folder for emails from Amazon
+
+In some cases your documents reach your Amazon Kindle account, but Amazon can't process them. In these situations you should get an automatic reply from Amazon with more information identifying the problem. Some users report that these emails get caught by their spam filters, so make sure you check your spam folder when you have trouble sending.
+
+## 6. Can you send documents directly to your Send-to-Kindle email address?
+
+Push to Kindle process web articles and send the resulting e-book files on your behalf to your Amazon Kindle's Send-to-Kindle address. If you suspect the issue may be with our service, rather than Amazon's end, an easy way to check is to email a small Word or PDF document as an attachment directly to your @kindle.com address (ie. not through Push to Kindle).
+
+If these show up on your Kindle, try using our Push to Kindle [web app](https://pushtokindle.fivefilters.org) and in its preview screen click the 'No Kindle?' tab and save the MOBI file to your computer. Then email the MOBI file as an attachment as you did before and see if that shows up.
+
+If these steps work for you, and you've checked that your email addresses have been configured in the Push to Kindle app correctly (remember sending directly to your Kindle account uses your regular e-mail address as the 'Send From' address), then you can contact us at help@fivefilters.org for additional support.
