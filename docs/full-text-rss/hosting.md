@@ -6,7 +6,7 @@ title: Hosting
 
 Full-Text RSS should works on most PHP hosting environments, but to get the most out of it, and to get the same results as our hosted service, we recommend you set up your server according to the instructions here.
 
-Our [Installation](/full-text-rss/installation.html) page explains how to upload Full-Text RSS to servers which offer FTP access.
+Our [Installation](/full-text-rss/installing.html) page explains how to upload Full-Text RSS to servers which offer FTP access.
 
 ## Hosted plans
 
