@@ -13,7 +13,14 @@ module.exports = {
     repo: 'fivefilters/docs',
     editLinks: true,
     sidebar: {
-
+      '/push-to-kindle/': [
+        '',
+        'email-address',
+        'kindle-addresses',
+        'personal-documents-features',
+        'troubleshooting'
+      ],
+      
       '/full-text-rss/': [
         '',
         'screenshots',
@@ -27,13 +34,9 @@ module.exports = {
         'example-feeds',
         'blocked-sites'
       ],
-
-      '/push-to-kindle/': [
-        '',
-        'email-address',
-        'kindle-addresses',
-        'personal-documents-features',
-        'troubleshooting'
+      
+      '/feed-creator/': [
+        ''
       ],
 
       '/pdf-newspaper/': [
@@ -57,12 +60,16 @@ module.exports = {
         text: 'Docs',
         items: [
           {
+            text: 'Push to Kindle',
+            link: '/push-to-kindle/'
+          },
+          {
             text: 'Full-Text RSS',
             link: '/full-text-rss/'
           },
           {
-            text: 'Push to Kindle',
-            link: '/push-to-kindle/'
+            text: 'Feed Creator',
+            link: '/feed-creator/'
           },
           {
             text: 'PDF Newspaper',
