@@ -8,7 +8,7 @@ meta:
 - name: description
   content: Documentation for FiveFilters.org applications
 - name: keyword
-  content: full-text rss, kindle, fivefilters, docs, api, howto, push to kindle, term extraction, install, pdf newspaper
+  content: full-text rss, kindle, fivefilters, docs, api, howto, push to kindle, term extraction, install, pdf newspaper, feed creator
 ---
 
 <style>
@@ -25,8 +25,9 @@ meta:
 
 Documentation for our products.
 
-* [Full-Text RSS](/full-text-rss)
 * [Push to Kindle](/push-to-kindle)
+* [Full-Text RSS](/full-text-rss)
+* [Feed Creator](/feed-creator)
 * [PDF Newspaper](/pdf-newspaper)
 
 # Forum
