@@ -32,7 +32,7 @@ With Feed Creator, when a feed reader requests the feed, here’s what happens b
 
 But as far as the feed reader is concerned, it's just another feed that's being requested.
 
-## Getting started: Create a feed from a web page
+## Get started: Create a feed from a web page
 
 To use the feed creator you should have:
 
@@ -47,7 +47,7 @@ We'd like to stress that if there's already a feed associated with the webpage, 
 
 If you supply **only** the page URL to Feed Creator, it will return the first set of links it encounters in the HTML. This could include things like navigation elements, which usually appear at the top of the page. That's probably not what you want. Below we're going to look at three different ways to extract the items you're interested in.
 
-### 1. Selecting links using URL segments
+### 1. URL segments as selectors
 
 The simplest way to narrow results to the set of links you are interested in is to see if you can find a URL segment that's exclusive to that set of links.
 
@@ -62,11 +62,11 @@ Let's say you're on a site and all the links you're interested in contain 'artic
 5. Click 'Preview' and wait for results.
 6. If the results look okay, you can subscribe to the generated feed using the button provided.
 
-::: warning
+::: warning NOTE
 It's important to note that what we’re trying to do is to identify patterns within the page that will not only return items that are currently on the page, but also pick up future entries. That's why we don't want to select links using identifiers that only apply to existing links (e.g. '20130902.htm' or '20130604.htm').
 :::
 
-### 2. Selecting links using class and id attributes
+### 2. Class or id attribute values as selectors
 
 Sometimes you'll need more than a URL segment to select the links you want. If you know some HTML you can check the source of the page and see if there are class or id attributes associated with the links, their parent elements, or ascendants. If you find some, you can use those values to restrict your search to those elements.
 
@@ -80,8 +80,20 @@ If you visit the [articles page](http://johnpilger.com/articles) and click 'Expa
 <span class="entry">
   <a href="[article url]" class="entry-link">[article title]</a>
   <span class="entry-date" title="1 day ago">[article date]</span>
-  <a href="#" rel="nofollow" class="show-intro" id="showintro-815">Show intro...</a>
-  <span class="intro" id="article-intro-815">[article description]</span>
+  <a href="#" rel="nofollow" class="show-intro" id="showintro-1">Show intro...</a>
+  <span class="intro" id="article-intro-1">[article description]</span>
+</span>
+<span class="entry">
+  <a href="[article url]" class="entry-link">[article title]</a>
+  <span class="entry-date" title="3 days ago">[article date]</span>
+  <a href="#" rel="nofollow" class="show-intro" id="showintro-2">Show intro...</a>
+  <span class="intro" id="article-intro-2">[article description]</span>
+</span>
+<span class="entry">
+  <a href="[article url]" class="entry-link">[article title]</a>
+  <span class="entry-date" title="1 week ago">[article date]</span>
+  <a href="#" rel="nofollow" class="show-intro" id="showintro-3">Show intro...</a>
+  <span class="intro" id="article-intro-3">[article description]</span>
 </span>
 ```
 
@@ -96,6 +108,55 @@ So let's try creating a feed from this information:
 5. Click 'Preview’ and wait for results.
 
 Here's a [direct link to results.](https://createfeed.fivefilters.org/index.php?url=johnpilger.com%2Farticles&in_id_or_class=entry-link)
+
+### 3. CSS selectors
+
+To use CSS selectors you have to select the advanced mode on the form. Selecting this option will reveal new fields which we'll look at in more detail here.
+
+![](/images/feed-creator/fc-advanced-selectors.png)
+
+Let's look at our sample HTML again:
+
+``` html
+<span class="entry">
+  <a href="[article url]" class="entry-link">[article title]</a>
+  <span class="entry-date" title="1 day ago">[article date]</span>
+  <a href="#" rel="nofollow" class="show-intro" id="showintro-1">Show intro...</a>
+  <span class="intro" id="article-intro-1">[article description]</span>
+</span>
+<span class="entry">
+  <a href="[article url]" class="entry-link">[article title]</a>
+  <span class="entry-date" title="3 days ago">[article date]</span>
+  <a href="#" rel="nofollow" class="show-intro" id="showintro-2">Show intro...</a>
+  <span class="intro" id="article-intro-2">[article description]</span>
+</span>
+<span class="entry">
+  <a href="[article url]" class="entry-link">[article title]</a>
+  <span class="entry-date" title="1 week ago">[article date]</span>
+  <a href="#" rel="nofollow" class="show-intro" id="showintro-3">Show intro...</a>
+  <span class="intro" id="article-intro-3">[article description]</span>
+</span>
+```
+
+* Item selector - if you've got a number of items on a page that you're trying to capture, this should be CSS to select all item elements. Based on our HTML snippet above, we'd enter `span.entry` here.
+* Item title - Feed Creator will use the first `<a>` element found inside the element selected by the item selector and use its link text as the title. To use a different element for the title, specify a selector for that element. This gets applied in the context of the item element. To omit item titles from your feed, enter `0` here.
+* Item URL - As above, the first `<a>` element will be used by default and its `href` attribute value will be the item URL. To use a different `a` element for the URL, specify a selector for that. To omit item URLs, enter `0`. To use the source URL (what you've entered as the page URL) for all items, enter `1`.
+* Item description - If the item element selected by the item selector contains a summary or description text, you can target that here. Based on our HTML snippet above, we'd enter `.intro` here.
+* Item date - if there's a date too, target that here. Based on our HTML snippet above, we'd enter: `.entry-date`.
+
+#### Example
+
+First, let’s see how the previous example looks using a CSS selector:
+
+* Page URL: `http://johnpilger.com/articles`
+* Item selector (CSS): `.entry`
+
+That's all we need to enter for a [basic feed](https://createfeed.fivefilters.org/index.php?url=johnpilger.com%2Farticles&item=.entry). Feed Creator will select the item blocks and then use the first `a` element for the article URL and article title. But what if we want to include the date and description? We can use the other item fields to select those:
+
+* Item description (CSS): `.intro`
+* Item date (CSS): `.entry-date`
+
+Now we'll get the additional elements in the feed. Here’s a [direct link](http://createfeed.fivefilters.org/index.php?url=http%3A%2F%2Fjohnpilger.com%2Farticles&item=.entry&item_desc=.intro&item_date=.entry-date) with results.
 
 *Work in progress*
 
