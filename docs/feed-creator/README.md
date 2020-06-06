@@ -70,6 +70,10 @@ It's important to note that what we’re trying to do is to identify patterns wi
 
 Sometimes you'll need more than a URL segment to select the links you want. If you know some HTML you can check the source of the page and see if there are class or id attributes associated with the links, their parent elements, or ascendants. If you find some, you can use those values to restrict your search to those elements.
 
+::: tip 
+The easiest way to find class and id attributes to use as selectors is to use [Firefox's page inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector). Simply right click a link or some other element on the page and select 'Inspect Element'. 
+:::
+
 #### Example
 
 [John Pilger's website](http://johnpilger.com) already offers an RSS feed for his articles, so this is one of those cases where you shouldn't really be using this tool. But I'll use it as an example.
