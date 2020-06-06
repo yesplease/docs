@@ -6,7 +6,7 @@ title: Feed Creator Intro
 
 Feed Creator is a web application for creating and filtering RSS feeds. RSS feeds are used to get notified of updates to your favourite sites and publications. Subscribe to sites that interest you and get alerted when new content appears without having to remember to visit the sites yourself to check for updates. Many sites offer RSS feeds for their content, but many don't. Feed Creator creator can be used to produce a feed for a site that doesn't offer a feed of its own. It can also be used to filter existing feeds to remove items that do not interest you.
 
-## Why would I use this?
+## What is used for?
 
 Here are a few cases where you might want to use Feed Creator:
 
@@ -76,13 +76,14 @@ Sometimes you'll need more than a URL segment to select the links you want. If y
 
 If you visit the [articles page](http://johnpilger.com/articles) and click 'Expand all articles', you’ll see his latest articles at the top. If you examine the HTML, you’ll find the entries are marked up as follows:
 
-    <span class="entry">
-      <a href="[article url]" class="entry-link">[article title]</a>
-      <span class="entry-date" title="1 day ago">[article date]</span>
-      <a href="#" rel="nofollow" class="show-intro" id="showintro-815">Show intro...</a>
-      <span class="intro" id="article-intro-815">[article description]</span>
-    </span>
-
+``` html
+<span class="entry">
+  <a href="[article url]" class="entry-link">[article title]</a>
+  <span class="entry-date" title="1 day ago">[article date]</span>
+  <a href="#" rel="nofollow" class="show-intro" id="showintro-815">Show intro...</a>
+  <span class="intro" id="article-intro-815">[article description]</span>
+</span>
+```
 
 Each article entry is contained in a `<span>` element with the class attribute value "entry". This element holds two link (`<a>`) elements. The actual article title and URL appear in the `<a>` element with class "entry-link".
 
