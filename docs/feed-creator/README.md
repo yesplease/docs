@@ -71,7 +71,7 @@ It's important to note that what we’re trying to do is to identify patterns wi
 Sometimes you'll need more than a URL segment to select the links you want. If you know some HTML you can check the source of the page and see if there are class or id attributes associated with the links, their parent elements, or ascendants. If you find some, you can use those values to restrict your search to those elements.
 
 ::: tip 
-The easiest way to find class and id attributes to use as selectors is to use [Firefox's page inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector). Right click a link or some other element on the page and select 'Inspect Element' to reveal the inspector.
+The easiest way to find class and id attributes to use as selectors is to use [Firefox's page inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Open_the_Inspector). Right click a link or some other element on the page and select 'Inspect Element' to reveal the inspector.
 :::
 
 #### Example
@@ -121,7 +121,7 @@ To use CSS selectors you have to select the advanced mode on the form. Selecting
 
 Let's look at our sample HTML again:
 
-``` html{1,3,5}
+``` html
 <span class="entry">
   <a href="[article url]" class="entry-link">[article title]</a>
   <span class="entry-date" title="1 day ago">[article date]</span>
@@ -142,11 +142,25 @@ Let's look at our sample HTML again:
 </span>
 ```
 
-* Item selector - if you've got a number of items on a page that you're trying to capture, this should be CSS to select all item elements. Based on our HTML snippet above, we'd enter `span.entry` here.
-* Item title - Feed Creator will use the first `<a>` element found inside the element selected by the item selector and use its link text as the title. To use a different element for the title, specify a selector for that element. This gets applied in the context of the item element. To omit item titles from your feed, enter `0` here.
-* Item URL - As above, the first `<a>` element will be used by default and its `href` attribute value will be the item URL. To use a different `a` element for the URL, specify a selector for that. To omit item URLs, enter `0`. To use the source URL (what you've entered as the page URL) for all items, enter `1`.
-* Item description - If the item element selected by the item selector contains a summary or description text, you can target that here. Based on our HTML snippet above, we'd enter `.intro` here.
-* Item date - if there's a date too, target that here. Based on our HTML snippet above, we'd enter: `.entry-date`.
+**Item selector**
+
+If you've got a number of items on a page that you're trying to capture, this should be CSS to select all item elements. Based on our HTML snippet above, we'd enter `span.entry` here.
+
+**Item title**
+
+Feed Creator will use the first `<a>` element found inside the element selected by the item selector and use its link text as the title. To use a different element for the title, specify a selector for that element. This gets applied in the context of the item element. To omit item titles from your feed, enter `0` here.
+
+**Item URL**
+
+As above, the first `<a>` element will be used by default and its `href` attribute value will be the item URL. To use a different `a` element for the URL, specify a selector for that. To omit item URLs, enter `0`. To use the source URL (what you've entered as the page URL) for all items, enter `1`.
+
+**Item description**
+
+If the item element selected by the item selector contains a summary or description text, you can target that here. Based on our HTML snippet above, we'd enter `.intro` here.
+
+**Item date**
+
+If there's a date too, target that here. Based on our HTML snippet above, we'd enter: `.entry-date`.
 
 #### Example
 
