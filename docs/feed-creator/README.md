@@ -39,7 +39,7 @@ To use the feed creator you should have:
 1. The URL of the source page which contains the items you're interested in.
 2. Some knowledge of HTML (and CSS for advanced selection).
 
-::: tip BEFORE WE GO ON
+::: warning BEFORE WE GO ON
 We'd like to stress that if there's already a feed associated with the webpage, you should use it instead of relying on this tool. Feed Creator extracts links from the webpage by looking at its HTML. If a website gets redesigned, HTML changes could break our generated feeds.
 :::
 
@@ -62,7 +62,7 @@ Let's say you're on a site and all the links you're interested in contain 'artic
 5. Click 'Preview' and wait for results.
 6. If the results look okay, you can subscribe to the generated feed using the button provided.
 
-::: tip
+::: warning
 It's important to note that what we’re trying to do is to identify patterns within the page that will not only return items that are currently on the page, but also pick up future entries. That's why we don't want to select links using identifiers that only apply to existing links (e.g. '20130902.htm' or '20130604.htm').
 :::
 
