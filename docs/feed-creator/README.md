@@ -72,6 +72,8 @@ Sometimes you'll need more than a URL segment to select the links you want. If y
 
 ::: tip 
 The easiest way to find class and id attributes to use as selectors is to use [Firefox's page inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Open_the_Inspector). Right click a link or some other element on the page and select 'Inspect Element' to reveal the inspector.
+
+When viewing the HTML source, or using the browser's inspector, you should bear in mind that it might not be seen the same way by Feed Creator. Servers may send back different responses depending on where the request originates. Another issue is how the HTML response is parsed. Even if the server sends back the same response to us as it does to your browser, your browser could parse it differently to our application. This is particularly true if the site uses Javascript to display the elements you're interested in. Feed Creator does not execute Javascript, so you might not be able to access those elements.
 :::
 
 #### Example
@@ -119,7 +121,7 @@ To use CSS selectors you have to select the advanced mode on the form. Selecting
 
 ![](/images/feed-creator/fc-advanced-selectors.png)
 
-Let's look at our sample HTML again:
+Let's look at a single item element in our sample HTML again:
 
 ``` html
 <span class="entry">
@@ -127,18 +129,6 @@ Let's look at our sample HTML again:
   <span class="entry-date" title="1 day ago">[article date]</span>
   <a href="#" rel="nofollow" class="show-intro" id="showintro-1">Show intro...</a>
   <span class="intro" id="article-intro-1">[article description]</span>
-</span>
-<span class="entry">
-  <a href="[article url]" class="entry-link">[article title]</a>
-  <span class="entry-date" title="3 days ago">[article date]</span>
-  <a href="#" rel="nofollow" class="show-intro" id="showintro-2">Show intro...</a>
-  <span class="intro" id="article-intro-2">[article description]</span>
-</span>
-<span class="entry">
-  <a href="[article url]" class="entry-link">[article title]</a>
-  <span class="entry-date" title="1 week ago">[article date]</span>
-  <a href="#" rel="nofollow" class="show-intro" id="showintro-3">Show intro...</a>
-  <span class="intro" id="article-intro-3">[article description]</span>
 </span>
 ```
 
@@ -176,6 +166,48 @@ That's all we need to enter for a [basic feed](https://createfeed.fivefilters.or
 
 Now we'll get the additional elements in the feed. Here’s a [direct link](http://createfeed.fivefilters.org/index.php?url=http%3A%2F%2Fjohnpilger.com%2Farticles&item=.entry&item_desc=.intro&item_date=.entry-date) with results.
 
-*Work in progress*
+#### More complicated example
 
-We'll have more documentation here soon. For the time being, please see [this blog post](https://blog.fivefilters.org/2013/10/19/feed-creator-our-new-tool-to-monitor-web-pages.html) for more information.
+Now let's look at a more complicated example: a Twitter timeline. The HTML below is not the current Twitter output, but it's based on actual Twitter output from a few years ago.
+
+::: warning TWITTER RSS
+Because Twitter updates its HTML structure a lot, we do not recommend using Feed Creator to create RSS feeds from Twitter timelines. If you need a RSS feed for Twitter, we recommend using [RSS Box](https://rssbox.herokuapp.com/) or [RSS Bridge](https://github.com/RSS-Bridge/rss-bridge).
+:::
+
+``` html{12,17}
+<div class="tweet original-tweet js-stream-tweet ...">
+    <span class="icon dogear"></span>
+    <div class="content">
+        <div class="stream-item-header">
+            <a class="account-group ..." href="..." data-user-id="...">
+                <img class="avatar js-action-profile-avatar" src="..." alt="">
+                <strong class="fullname js-action-profile-name ...">...</strong>
+                <span>&rlm;</span>
+                <span class="username ..."><s>@</s><b>...</b></span>
+            </a>
+            <small class="time">
+                <a href="[tweet URL]" class="tweet-timestamp ..." title="[date]">
+                    <span class="_timestamp js-short-timestamp ...">1h</span>
+                </a>
+            </small>
+        </div>
+        <p class="js-tweet-text tweet-text">[tweet text]</p>
+        ...
+    </div>
+</div>
+```
+
+Notice that the tweet URL appears in the element which holds the date, and there is no suitable title (unless you consider the tweet text to be the title) to use for feed items. So here we're going to tell Feed Creator to omit item titles, and to use the tweet URL as the item URL. We could tell it to use the tweet text (`p.tweet-text`) as the description, but then we wouldn’t know who tweeted it (could be a retweet), so we’ll tell it to use the parent element (`div.content`). Here's what our parameters will look like:
+
+* Item selector (CSS): `.original-tweet`
+* Item URL selector (CSS): `a.tweet-timestamp`
+* Item description selector (CSS): `.content`
+* Item title selector (CSS): `0`
+
+If we stop here, we'll find that the description will contain text from elements within `div.content` which we're not interested in. So let's remove these elements by enabling HTML cleanup: 
+
+* Remove matching HTML elements (CSS): `.stream-item-footer`, `.username`, `.js-short-timestamp`
+
+Hopefully that's enough to get you started with Feed Creator. 
+
+We hope to expand the documentation for Feed Creator in the future, but for now, please feel free to [post questions in our forum](https://forum.fivefilters.org/c/feed-creator/8).
