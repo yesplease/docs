@@ -4,9 +4,11 @@ title: Feed Creator Intro
 
 ## What is Feed Creator?
 
-Feed Creator is a web application for creating and filtering RSS feeds. RSS feeds are used to get notified of updates to your favourite sites and publications. Subscribe to sites that interest you and get alerted when new content appears without having to remember to visit the sites yourself to check for updates. Many sites offer RSS feeds for their content, but many don't. Feed Creator creator can be used to produce a feed for a site that doesn't offer a feed of its own. It can also be used to filter existing feeds to remove items that do not interest you.
+Feed Creator is a web application for creating and filtering RSS feeds. RSS feeds are used to get notified of updates to your favourite sites and publications. Subscribe to sites that interest you and get alerted when new content appears without having to remember to visit the sites yourself to check for updates. 
 
-## What is used for?
+Many sites already offer RSS feeds for their content, but many don't. And with the rise in online advertising, many sites prefer you to visit their pages again and again to get updates, so they often choose not to publish feeds. Feed Creator can produce feeds for sites that doesn't offer their own, so you can get notified of updates without having to visit the site. It can also be used to filter existing feeds to remove items that do not interest you.
+
+## Why would I use it?
 
 Here are a few cases where you might want to use Feed Creator:
 
