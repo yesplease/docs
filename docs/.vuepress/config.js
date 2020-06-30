@@ -36,7 +36,8 @@ module.exports = {
       ],
       
       '/feed-creator/': [
-        ''
+        '',
+        'usage'
       ],
 
       '/pdf-newspaper/': [
