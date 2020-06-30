@@ -37,6 +37,7 @@ module.exports = {
       
       '/feed-creator/': [
         '',
+        'quick-start',
         'usage'
       ],
 
