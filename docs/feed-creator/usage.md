@@ -2,7 +2,7 @@
 title: Form fields
 ---
 
-# Usage and Parameters
+# Form fields
 
 The simplest way to use Feed Creator is to use the form provided. See below for information about the main form fields you can use.
 
