@@ -8,7 +8,7 @@ title: System Requirements
 These are the system requirements for our self-hosted version of Full-Text RSS. If you'd rather let us manage the service, you can use our [hosted service](https://market.mashape.com/fivefilters/full-text-rss).
 :::
 
-PHP 5.4 or above is required.
+PHP 5.6 or above is required.
 
 Apache web server is recommended, but the code has been reported to work on other servers too.
 
