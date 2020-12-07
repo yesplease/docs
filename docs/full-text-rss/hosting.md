@@ -26,9 +26,9 @@ We have a script to set your system up with all the necessary components. The st
 We recommend using your newly set up VPS server only for Full-Text RSS. But remember, with a VPS, system security and updates will be your responsibility.
 :::
 
-### [Hetzner Cloud (VPS)](https://www.hetzner.com/cloud)
+### [Hetzner Cloud (VPS)](https://hetzner.cloud/?ref=wU7uWRgHj6rP)
 
-1. Create an account with [Hetzner Cloud](https://www.hetzner.com/cloud)
+1. Create an account with [Hetzner Cloud](https://hetzner.cloud/?ref=wU7uWRgHj6rP) (free €20 credit with link)
 1. Login
 1. Add a server
 1. Select Ubuntu 18.04 server image
