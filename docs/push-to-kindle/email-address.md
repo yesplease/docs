@@ -30,6 +30,6 @@ To add an address to your approved list you will have to:
 1. Click 'Add a new approved e-mail address'
 1. Enter `kindle@fivefilters.org`
 
-::: tip
-For extra privacy, you can also add a made up email address, e.g. made.up.address@nowhere.com, and tell Push to Kindle to use that as the 'from' address.
+::: warning
+Some users are reporting problems with delivery when using a custom 'send from' address. For the time being we're recommending users stick to 'kindle@fivefilters.org' as the send from address.
 :::
