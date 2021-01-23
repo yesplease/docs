@@ -20,7 +20,7 @@ If you're unsure what your Kindle email address is, or if you'd like to change i
 
 Amazon will only delivery articles sent to your Kindle email address if the sender's address is in your approved list (it silently discards emails which are sent from addresses not in your approved list).
 
-So to ensure articles sent with Push to Kindle reach your Kindle, you will need to add **kindle@fivefilters.org** to your approved list, or tell Push to Kindle to send from an address already in your approved list. 
+So to ensure articles sent with Push to Kindle reach your Kindle, you will need to add **kindle@fivefilters.org** to your approved list. 
 
 To add an address to your approved list you will have to:
 
