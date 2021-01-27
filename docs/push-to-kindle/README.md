@@ -22,7 +22,8 @@ Push to Kindle is available for most popular browsers.
 
 1. [Push to Kindle for Chrome](https://chrome.google.com/webstore/detail/push-to-kindle/pnaiinchjaonopoejhknmgjingcnaloc)
 2. [Push to Kindle for Firefox](https://addons.mozilla.org/firefox/addon/kindle-it/)
-3. [Push to Kindle for Safari](https://apps.apple.com/us/app/push-for-kindle/id1473709319)
+3. [Push to Kindle for Safari](https://apps.apple.com/app/push-to-kindle-by-fivefilters/id1548529953)
+4. [Push to Kindle for Edge](https://microsoftedge.microsoft.com/addons/detail/ojndoknmfbbpkmnjdgmnffmoogmkjnkf)
 
 After installing you will see a new toolbar button in your browser.
 
