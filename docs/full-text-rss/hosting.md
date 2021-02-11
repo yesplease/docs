@@ -31,7 +31,7 @@ We recommend using your newly set up VPS server only for Full-Text RSS. But reme
 1. Create an account with [Hetzner Cloud](https://hetzner.cloud/?ref=wU7uWRgHj6rP) (free €20 credit with link)
 1. Login
 1. Add a server
-1. Select Ubuntu 18.04 server image
+1. Select Ubuntu 20.04 server image
 1. Select the plan with 2GB memory
 1. Click 'Create'
 1. SSH into your newly created server using login details sent to your email
@@ -39,8 +39,8 @@ We recommend using your newly set up VPS server only for Full-Text RSS. But reme
     ```
     apt-get update
     apt-get -y install puppet
-    wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-18.04.pp
-    puppet apply ubuntu-18.04.pp
+    wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-20.04.pp
+    puppet apply ubuntu-20.04.pp
     ```
 1. That last command may take some time as various components are installed. You should see output which looks something like this: [puppet output](https://bitbucket.org/fivefilters/hosting/src/master/puppet-output.txt)
 1. Apache should be up and running now. Test by visiting 
@@ -55,15 +55,15 @@ We recommend using your newly set up VPS server only for Full-Text RSS. But reme
 1. Create a droplet
 1. Enter something in the hostname field (e.g. full-text-rss)
 1. Select the plan with 1GB or 2GB memory
-1. Select Ubuntu 18.04 x64 server image
+1. Select Ubuntu 20.04 x64 server image
 1. Click 'Create'
 1. SSH into your newly created server using login details sent to your email
 1. From the command line, enter the following commands, one line at a time: 
     ```
     apt-get update
     apt-get -y install puppet
-    wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-18.04.pp
-    puppet apply ubuntu-18.04.pp
+    wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-20.04.pp
+    puppet apply ubuntu-20.04.pp
     ```
 1. That last command may take some time as various components are installed. You should see output which looks something like this: [puppet output](https://bitbucket.org/fivefilters/hosting/src/master/puppet-output.txt)
 1. Apache should be up and running now. Test by visiting `http://[ip-sent-to-you-by-digital-ocean]`
@@ -75,7 +75,7 @@ We recommend using your newly set up VPS server only for Full-Text RSS. But reme
 1. Create an account with [Linode](http://www.linode.com/?r=f97d3f09cdc72c58fb35d3382796a7d57e8e8664)
 1. Login and add a 2GB Linode
 1. From the dashboard of your new Linode, click 'Deploy a Linux Distribution'
-1. In the distribution dropdown, select Ubuntu 18.04
+1. In the distribution dropdown, select Ubuntu 20.04
 1. For disk size, leave default or change to 10000 MB
 1. Swap disk: leave default (256)
 1. Enter a root password
@@ -88,8 +88,8 @@ We recommend using your newly set up VPS server only for Full-Text RSS. But reme
     ```
     apt-get update
     apt-get -y install puppet
-    wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-18.04.pp
-    puppet apply ubuntu-18.04.pp
+    wget https://bitbucket.org/fivefilters/hosting/raw/master/ubuntu-20.04.pp
+    puppet apply ubuntu-20.04.pp
     ```
 1. That last command may take some time as various components are installed. You should see output which looks something like this: [puppet output](https://bitbucket.org/fivefilters/hosting/src/master/puppet-output.txt)
 1. Apache should be up and running now. Test by visiting `http://[your-linode-ip]`
