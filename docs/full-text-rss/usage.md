@@ -166,7 +166,7 @@ The configuration file will ultimately determine if and how many of these parame
     <tr>
         <td>parser</td>
         <td><tt>html5php</tt>, <tt>libxml</tt></td>
-        <td>The default parser is libxml as it's the fastest. HTML5-PHP is an HTML5 parser implemented in PHP. It's slower than libxml, but can often produce better results. You can request HTML5-PHP be used as the parser in a site-specific config file (to ensure it gets used for all URLs for that site), or explicitly via this request parameter. Note: if the Gumbo PHP extension is available, that will be used regardless of this parameter or site config file directives.</td>
+        <td>The default parser is HTML5-PHP, an HTML5 parser implemented in PHP. It's a little slower than libxml, but handles modern HTML much better. You can request libxml be used as the parser in a site-specific config file (to ensure it gets used for all URLs for that site), or explicitly via this request parameter.</td>
     </tr>
     <tr>
         <td>siteconfig</td>
