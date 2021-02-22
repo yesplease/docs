@@ -38,7 +38,8 @@ module.exports = {
       '/feed-creator/': [
         '',
         'quick-start',
-        'usage'
+        'usage',
+        'css-selectors'
       ],
 
       '/pdf-newspaper/': [
