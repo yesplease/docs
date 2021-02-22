@@ -140,4 +140,4 @@ If an attribute name is given, Feed Creator will use the [attribute value](https
 * `a @title` - Extract the text from the title attribute of the first `<a>` element
 * `time @datetime` - Extract the text (date) from the datetime attribute of the first `<time>` element 
 
-Note: It's only possible to specify a single attribute value. The following is invalid: `img @alt, a @title`.
+Note: It's only possible to specify a single attribute value at the very end. The following is invalid: `img @alt, a @title`. The following is valid but will result in Feed Creator looking for the title attribute regardless of the element returned: `img, a @title`.
