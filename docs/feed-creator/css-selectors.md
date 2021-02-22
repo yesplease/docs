@@ -6,7 +6,7 @@ title: CSS Selectors
 
 For the most flexibility in selecting the desired items on a page, choose ['Advanced selectors'](/feed-creator/quick-start.html#_3-css-selectors) in the main Feed Creator form.
 
-Feed Creator from version 2.2 uses [Symfony's CSS Selector](https://github.com/symfony/css-selector) to convert CSS selectors into XPath expressions.
+Feed Creator from version 2.2 uses [Symfony's CSS Selector](https://github.com/symfony/css-selector) to convert CSS selectors into XPath expressions (used internally).
 
 Feed Creator supports a variety of CSS selectors (with [some exceptions](https://symfony.com/doc/current/components/css_selector.html#limitations-of-the-cssselector-component)).
 
@@ -72,17 +72,6 @@ The item title, item description, item URL, item date, and item image selectors 
 
 [More examples at CSS-Tricks](https://css-tricks.com/almanac/selectors/a/attribute/) and [more information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
-## Multiple selectors
-
-**Syntax**: `A, B`
-
-**Examples**:
-
-* `div, span` - all `<div>` and `<span>` elements
-* `.headline, h2` - all elements with `class="headline"` and all `<h2>` elements
-
-[More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list)
-
 ## Descendant selector
 
 **Syntax**: `A B`
@@ -117,6 +106,17 @@ The item title, item description, item URL, item date, and item image selectors 
 <span>* Feed Creator borrows the XPath `[x]` equivalent as a shorthand. It's not part of CSS.</span>
 
 [More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+
+## Multiple selectors
+
+**Syntax**: `A, B`
+
+**Examples**:
+
+* `div, span` - all `<div>` and `<span>` elements
+* `.headline, h2` - all elements with `class="headline"` and all `<h2>` elements
+
+[More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list)
 
 ## Other selectors
 
