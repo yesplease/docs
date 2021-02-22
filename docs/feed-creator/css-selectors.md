@@ -120,7 +120,7 @@ The item title, item description, item URL, item date, and item image selectors 
 
 ## Other selectors
 
-You'll find more information about CSS selectors and other types of selectors on [Mozilla's CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) page.
+You'll find more information about other types of selectors you can use with Feed Creator on [Mozilla's CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) page.
 
 ## Extracting attribute values
 
