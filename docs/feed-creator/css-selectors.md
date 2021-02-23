@@ -128,7 +128,7 @@ You'll find more information about other types of selectors you can use with Fee
 CSS was created for styling elements in browsers. It's useful for selecting elements but there's no way to select attribute values directly (other than specifying that elements should contain a certain attribute value). 
 :::
 
-In Feed Creator, we use CSS not for styling, but for extracting text content from HTML elements. Sometimes that text content is inside an attribute value. So in addition to the CSS above, some of the Feed Creator fields (item title, item description, item URL, item date and item image) can also take an attribute name at the very end.
+In Feed Creator, we use CSS not for styling, but for extracting text content from HTML elements. Sometimes that text content is inside an attribute value. So in addition to the CSS above, many of the Feed Creator fields (item title, item description, item URL, item date and item image) can also take an attribute name at the very end.
 
 If an attribute name is given, Feed Creator will use the [attribute value](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) as the content. If an attribute name is not given, Feed Creator will use the element's [text content](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) or, in the case of item url, the href attribute, and in the case of item image, the src attribute.
 
