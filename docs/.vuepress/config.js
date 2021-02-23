@@ -39,7 +39,8 @@ module.exports = {
         '',
         'quick-start',
         'usage',
-        'css-selectors'
+        'css-selectors',
+        'proxy'
       ],
 
       '/pdf-newspaper/': [

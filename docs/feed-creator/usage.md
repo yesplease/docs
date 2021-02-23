@@ -125,6 +125,7 @@ The simplest way to use Feed Creator is to use the form provided. See below for 
 <p>Extract item URL from selected element. This is applied within the context of each item selected by the item selector.</p>
 <p>If left empty, the URL of the first matching &lt;a&gt; element will be used.</p>
 <p>If set to 0, URLs will not be included in the output. If set to 1, all item URLs will point to the input URL.</p>
+<p>To use a different element or attribute value, use 'selector @attr', for example: 'img @src'.</p>
 
 <h4>Example</h4>
 <p>Given the following HTML, and assuming we've set the item selector to 'div.news .item', to select the desired item URL we'd pass 'a[2]' or 'a.story' as the item URL selector.</p>
@@ -133,15 +134,15 @@ The simplest way to use Feed Creator is to use the form provided. See below for 
 <div class="news">
   <div class="item">
     <a href="/news">News:</a>
-    <a class="story" href="[url 1]>title 1</a>
+    <a class="story" href="[url 1]">title 1</a>
   </div>
   <div class="item">
     <a href="/opinion">Opinion:</a>
-    <a class="story" href="[url 2]>title 2</a>
+    <a class="story" href="[url 2]">title 2</a>
   </div>
   <div class="item">
     <a href="/news">News:</a>
-    <a class="story" href="[url 3]>title 3</a>
+    <a class="story" href="[url 3]">title 3</a>
   </div>
 </div>
 ```
@@ -215,6 +216,36 @@ The simplest way to use Feed Creator is to use the form provided. See below for 
 <p>Feed Creator uses PHP, which uses the US interpretation when the slash separator is used, and European interpretation when a hyphen is used. So '2/5/2020' will be interpreted as 5th February 2020, but '2-5-2020' will be 2nd May 2020.</p>
 <p>To handle the example above, we pass the following format: 'j/n/Y'</p>
 
+## Item image (CSS)
+
+<p>Extract item image URL from the selected element. This is applied within the context of each item selected by the item selector.</p>
+<p>If left empty, images will not be included in the output.</p>
+<p>This should point to an <tt>img</tt> element. Feed Creator will extract the URL from the <tt>src</tt> attribute.</p>
+<p>To use a different element or attribute value, use 'selector @attr', for example: 'img @data-src'.</p>
+
+<h4>Example</h4>
+<p>Given the following HTML, and assuming we've set the item selector to 'div.news .item', use 'img' as the item image selector to select the image elements.</p>
+
+```html
+<div class="news">
+  <div class="item">
+    <h3>title 1</h3>
+    <img src="[image url 1]">
+    <a href="[url 1]">Read more...</a>
+  </div>
+  <div class="item">
+    <h3>title 2</h3>
+    <img src="[image url 2]">
+    <a href="[url 2]">Read more...</a>
+  </div>
+  <div class="item">
+    <h3>title 3</h3>
+    <img src="[image url 3]">
+    <a href="[url 3]">Read more...</a>
+  </div>
+</div>
+```
+
 ## Remove HTML elements (CSS)
 
 <p>Remove elements matching CSS selector. This will be processed before we start looking for items.</p>
@@ -246,6 +277,25 @@ The simplest way to use Feed Creator is to use the form provided. See below for 
   </div>
 </div>
 ```
+
+## Clean query string params
+
+<p>Keep or remove query string parameters from item URLs.</p>
+<p>The query string in a URL appears after the question mark symbol, e.g. 
+
+    http://example.org/article?id=879&session=19382
+
+<p>The URL above has two query string parameters, named 'id' and 'session'. On some sites, query string parameters identify content, and should be preserved. On others, they are used for tracking and can be stripped.</p>
+<p>We recommend stripping non-essential query string parameters because they can affect whether feed items are treated as new or not by your feed reader.</p>
+<h4>Possible values</h4>
+<ul>
+    <li>1 = preserve all (default)</li>
+    <li>0 = remove all</li>
+    <li>param1,param2 = remove all except param1 and param2</li> 
+</ul>
+<p>In the example URL above, the 'id' parameter identifies the article ID and should be preserved, but the session parameter is nonessential.</p>
+<p>The site might generated a new session ID for its links next time Feed Creator fetches the page, which might result in the same feed items now being treated as new by a feed reader because the URLs now look different from before.</p>
+<p>To prevent that happening, we can tell Feed Creator to only preserve the 'id' parameter by entering 'id' in this field.</p>
 
 ## Keep filters
 
@@ -280,6 +330,14 @@ The simplest way to use Feed Creator is to use the form provided. See below for 
 
 <p>The feed title to use in the generated feed. If omitted, whatever's in the &lt;title&gt; element of the web page will be used.</p>
 <p>Note: this should be the actual title, not a selector.</p>
+
+## Item guid
+
+<p>A <a href="https://www.rssboard.org/rss-specification#ltguidgtSubelementOfLtitemgt" target="_blank" title="guid is an optional sub-element of a feed item">guid</a> is an identifier that's usually
+used by feed readers to determine if a feed item is new or not. It's not required by the RSS spec, but some feed readers might want it included.</p>
+<p>By default, the guid is not included when you generated a feed with Feed Creator.</p>
+<p>If you'd like it included, you can tell Feed Creator to generate an ID based on each item's url, title or both.</p>
+<p>If the guid is omitted, most feed readers will use the item URL to determine if a feed item is new or not.</p>
 
 ## Premium access key
 
