@@ -87,7 +87,7 @@ Here's a [direct link to results.](https://createfeed.fivefilters.org/index.php?
 
 ## 3. CSS selectors
 
-To use CSS selectors you have to select the advanced mode on the form. Selecting this option will reveal new fields which we'll look at in more detail here.
+To use [CSS selectors](/feed-creator/css-selectors.html) you have to select the advanced mode on the form. Selecting this option will reveal new fields which we'll look at in more detail here.
 
 ![](/images/feed-creator/fc-advanced-selectors.png)
 
@@ -141,7 +141,7 @@ Now we'll get the additional elements in the feed. Here’s a [direct link](http
 Now let's look at a more complicated example: a Twitter timeline. The HTML below is not the current Twitter output, but it's based on actual Twitter output from a few years ago.
 
 ::: warning TWITTER RSS
-Because Twitter updates its HTML structure a lot, we do not recommend using Feed Creator to create RSS feeds from Twitter timelines. If you need a RSS feed for Twitter, we recommend using [RSS Box](https://rssbox.herokuapp.com/) or [RSS Bridge](https://github.com/RSS-Bridge/rss-bridge).
+Because Twitter updates its HTML structure a lot, we do not recommend using Feed Creator to create RSS feeds from Twitter timelines. If you need a RSS feed for Twitter, use our [Feed Control](https://feedcontrol.fivefilters.org/) service, or [RSS Bridge](https://github.com/RSS-Bridge/rss-bridge).
 :::
 
 ``` html{12,17}
@@ -177,6 +177,10 @@ Notice that the tweet URL appears in the element which holds the date, and there
 If we stop here, we'll find that the description will contain text from elements within `div.content` which we're not interested in. So let's remove these elements by enabling HTML cleanup: 
 
 * Remove matching HTML elements (CSS): `.stream-item-footer`, `.username`, `.js-short-timestamp`
+
+::: tip 
+Feed Creator supports a wide range of CSS selectors. We list the kinds of selectors you can use, with examples, on the [CSS Selectors](/feed-creator/css-selectors.html) page.
+:::
 
 Hopefully that's enough to get you started with Feed Creator. 
 
