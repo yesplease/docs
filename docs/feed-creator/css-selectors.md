@@ -148,7 +148,7 @@ Feed Creator supports the following selectors that aren't part of CSS.
 
 Feed Creator borrows the XPath `[x]` equivalent as a shorthand. It's not part of CSS.
 
-### Difference between this and :nth-child(x) and :nth-of-type(x)
+### Difference between [x] and :nth-child(x) and :nth-of-type(x)
 
 Let's say we have the following HTML
 
