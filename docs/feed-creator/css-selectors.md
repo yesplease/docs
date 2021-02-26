@@ -8,7 +8,9 @@ For the most flexibility in selecting the desired items on a page, choose ['Adva
 
 Feed Creator from version 2.2 uses [Symfony's CSS Selector](https://github.com/symfony/css-selector) to convert CSS selectors into XPath expressions (used internally).
 
-Feed Creator supports a variety of CSS selectors (with [some exceptions](https://symfony.com/doc/current/components/css_selector.html#limitations-of-the-cssselector-component)).
+Feed Creator supports a variety of CSS selectors (with [some exceptions](https://symfony.com/doc/current/components/css_selector.html#limitations-of-the-cssselector-component)). You'll find more information about the selectors you can use with Feed Creator on [Mozilla's CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) page. (We cover the main ones below.)
+
+Feed Creator also supports a few additional selectors that aren't part of CSS. They're covered in the last section.
 
 ::: tip NUMBER OF ELEMENTS SELECTED
 CSS selectors can return a number of elements. In Feed Creator, the main item selector should be used to return elements containing the individual items, e.g. `div.news-story` might return three elements which contain other elements (title, url, date) related to news story 1, news story 2, and news story 3.
@@ -96,16 +98,29 @@ The item title, item description, item URL, item date, and item image selectors 
 
 ## :nth-child selector
 
-**Syntax**: `:nth-child(x)` or `[x]` (NOT CSS)
+**Syntax**: `:nth-child(x)`
 
 **Examples**:
 
-* `li:nth-child(2)` - selects the second `<li>` element in a list
-* `li[2]` - selects the second `<li>` element in a list*
+* `li:nth-child(2)` - selects the second child element if it's an `<li>` element, otherwise selects nothing
 
-<span>* Feed Creator borrows the XPath `[x]` equivalent as a shorthand. It's not part of CSS.</span>
+::: warning
+In most cases you will probably want the non-standard 'Element by position' selector covered in the last section. It differs from this in an important way.
+:::
 
 [More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+
+**Syntax**: `:nth-of-type(x)`
+
+**Examples**:
+
+* `p:nth-of-type(2)` - selects the second `<p>` child element
+
+::: warning
+In most cases you will probably want the non-standard 'Element by position' selector covered in the last section. It differs from this in an important way.
+:::
+
+[More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type)
 
 ## Multiple selectors
 
@@ -118,9 +133,57 @@ The item title, item description, item URL, item date, and item image selectors 
 
 [More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list)
 
-## Other selectors
+# Other selectors
 
-You'll find more information about other types of selectors you can use with Feed Creator on [Mozilla's CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) page.
+Feed Creator supports the following selectors that aren't part of CSS.
+
+## Element by position
+
+**Syntax**: `[x]`
+
+**Examples**:
+
+* `li[2]` - selects the second `<li>` element in a list
+* `p.info[2]` - selects the second `<p class="info">` child element
+
+Feed Creator borrows the XPath `[x]` equivalent as a shorthand. It's not part of CSS.
+
+### Difference between this and :nth-child(x) and :nth-of-type(x)
+
+Let's say we have the following HTML
+
+```html
+<div>
+  <p>Text 1</p>
+  <img src="example.jpg">
+  <p>Text 2</p>
+  <p class="more">Text 3</p>
+  <p class="more">Text 4</p>
+</div>
+```
+
+* `p[1]` selects "Text 1" (the 1st `p` child element)
+* `p[2]` selects "Text 2" (the 2nd `p` child element)
+* `p.more[1]` selects "Text 3" (the 1st `p` with class "more" element)
+* `p.more[2]` selects "Text 4" (the 2nd `p` with class "more" element)
+
+What about `nth-child(x)?`
+
+* `p:nth-child(1)` selects "Text 1" (1st child is a `p` element)
+* `p:nth-child(2)` selects nothing. (2nd child but it's `img`, not `p`)
+* `p:nth-child(3)` selects "Text 2" (3rd child is a `p` element)
+* `p.more:nth-child(1)` selects nothing (1st child doesn't have class "more")
+* `p.more:nth-child(2)` selects nothing (2nd child is `img`, not `p`)
+* `p.more:nth-child(3)` selects nothing (3rd child doesn't have class "more")
+* `p.more:nth-child(4)` selects "Text 3" (4th child is a `p` element with class "more")
+
+What about `nth-of-type(x)?`
+
+* `p:nth-of-type(1)` selects "Text 1" (the 1st `p` child element)
+* `p:nth-of-type(2)` selects "Text 2" (the 2nd `p` child element)
+* `p.more:nth-of-type(1)` selects nothing (the 1st `p` child element does not have class "more")
+* `p.more:nth-of-type(2)` selects nothing (the 2nd `p` child element does not have class "more")
+* `p.more:nth-of-type(3)` selects "Text 3" (the 3rd `p` child element has class "more")
 
 ## Extracting attribute values
 
