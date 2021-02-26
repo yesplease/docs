@@ -148,8 +148,6 @@ Feed Creator supports the following selectors that aren't part of CSS.
 * `li[2]` - selects the second `<li>` child element
 * `p.info[2]` - selects the second `<p class="info">` child element
 
-Feed Creator borrows the XPath `[x]` equivalent as a shorthand. It's not part of CSS.
-
 ### Difference between [x] and :nth-child(x) and :nth-of-type(x)
 
 Let's say we have the following HTML. A simple `<div>` element with 5 child elements.
