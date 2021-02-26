@@ -110,6 +110,8 @@ In most cases you will probably want the non-standard 'Element by position' sele
 
 [More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
 
+## :nth-of-type selector
+
 **Syntax**: `:nth-of-type(x)`
 
 **Examples**:
