@@ -170,7 +170,7 @@ Let's say we have the following HTML. A simple `<div>` element with 5 child elem
 What about `nth-child(x)?`
 
 * `p:nth-child(1)` selects "Text 1" (1st child is a `p` element)
-* `p:nth-child(2)` selects nothing. (2nd child but it's `img`, not `p`)
+* `p:nth-child(2)` selects nothing. (2nd child is `img`, not `p`)
 * `p:nth-child(3)` selects "Text 2" (3rd child is a `p` element)
 * `p.more:nth-child(1)` selects nothing (1st child doesn't have class "more")
 * `p.more:nth-child(2)` selects nothing (2nd child is `img`, not `p`)
