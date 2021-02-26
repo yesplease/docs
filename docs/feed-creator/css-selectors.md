@@ -105,7 +105,7 @@ The item title, item description, item URL, item date, and item image selectors 
 * `li:nth-child(2)` - selects the second child element if it's an `<li>` element, otherwise selects nothing
 
 ::: warning
-In most cases you will probably want the non-standard 'Element by position' selector covered in the last section. It differs from this in an important way.
+In most cases you will probably want the non-CSS 'Element by position' selector covered in the last section. It differs from this in an important way.
 :::
 
 [More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
@@ -119,7 +119,7 @@ In most cases you will probably want the non-standard 'Element by position' sele
 * `p:nth-of-type(2)` - selects the second `<p>` child element
 
 ::: warning
-In most cases you will probably want the non-standard 'Element by position' selector covered in the last section. It differs from this in an important way.
+In most cases you will probably want the non-CSS 'Element by position' selector covered in the last section. It differs from this in an important way.
 :::
 
 [More information at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type)
