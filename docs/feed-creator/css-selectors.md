@@ -170,19 +170,19 @@ Let's say we have the following HTML. A simple `<div>` element with 5 child elem
 What about `nth-child(x)?`
 
 * `p:nth-child(1)` selects **Text 1** (1st child is a `p` element)
-* `p:nth-child(2)` selects nothing. (2nd child is `img`, not `p`)
+* `p:nth-child(2)` selects *nothing*. (2nd child is `img`, not `p`)
 * `p:nth-child(3)` selects **Text 2** (3rd child is a `p` element)
-* `p.more:nth-child(1)` selects nothing (1st child doesn't have class "more")
-* `p.more:nth-child(2)` selects nothing (2nd child is `img`, not `p`)
-* `p.more:nth-child(3)` selects nothing (3rd child doesn't have class "more")
+* `p.more:nth-child(1)` selects *nothing* (1st child doesn't have class "more")
+* `p.more:nth-child(2)` selects *nothing* (2nd child is `img`, not `p`)
+* `p.more:nth-child(3)` selects *nothing* (3rd child doesn't have class "more")
 * `p.more:nth-child(4)` selects **Text 3** (4th child is a `p` element with class "more")
 
 What about `nth-of-type(x)?`
 
 * `p:nth-of-type(1)` selects **Text 1** (the 1st `p` child element)
 * `p:nth-of-type(2)` selects **Text 2** (the 2nd `p` child element)
-* `p.more:nth-of-type(1)` selects nothing (the 1st `p` child element does not have class "more")
-* `p.more:nth-of-type(2)` selects nothing (the 2nd `p` child element does not have class "more")
+* `p.more:nth-of-type(1)` selects *nothing* (the 1st `p` child element does not have class "more")
+* `p.more:nth-of-type(2)` selects *nothing* (the 2nd `p` child element does not have class "more")
 * `p.more:nth-of-type(3)` selects **Text 3** (the 3rd `p` child element has class "more")
 
 ## Extracting attribute values
