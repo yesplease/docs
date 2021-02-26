@@ -143,7 +143,7 @@ Feed Creator supports the following selectors that aren't part of CSS.
 
 **Examples**:
 
-* `li[2]` - selects the second `<li>` element in a list
+* `li[2]` - selects the second `<li>` child element
 * `p.info[2]` - selects the second `<p class="info">` child element
 
 Feed Creator borrows the XPath `[x]` equivalent as a shorthand. It's not part of CSS.
