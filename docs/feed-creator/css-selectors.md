@@ -150,7 +150,7 @@ Feed Creator borrows the XPath `[x]` equivalent as a shorthand. It's not part of
 
 ### Difference between [x] and :nth-child(x) and :nth-of-type(x)
 
-Let's say we have the following HTML
+Let's say we have the following HTML. A simple `<div>` element with 5 child elements.
 
 ```html
 <div>
