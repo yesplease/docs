@@ -81,7 +81,7 @@ When using Feed Creator, the IP address shown from such a page will be the IP ad
 
 **Testing Feed Creator**
 
-1. Enter the URL https://myexternalip.com/ into the URL field in Feed Creator and hit ‘Preview’
+1. Enter the URL `https://myexternalip.com/` into the URL field in Feed Creator and hit ‘Preview’
 1. You should see the IP address of the server Feed Creator is hosted on in the results:
 1. “My External IP address – [your server IP]”
 1. Click the RSS Feed button to load the RSS feed in your browser
