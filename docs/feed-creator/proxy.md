@@ -60,7 +60,7 @@ To indicate that the proxy server you entered should be used, you will need to c
 
     .../feed-creator/extract.php?url=example.org...&proxy=my-proxy
 
-## More than one proxy service?
+### More than one proxy service?
 
 To use different proxy services for different feeds, you can enter more in the configuration file and give each one a unique name. Then pass the name of the proxy service that should be used in the proxy request parameter. So some feeds might have `&proxy=proxy1` and others `&proxy=proxy2`.
 
