@@ -17,7 +17,7 @@ module.exports = {
         '',
         'email-address',
         'kindle-addresses',
-        'personal-documents-features',
+        //'personal-documents-features',
         'troubleshooting'
       ],
       
