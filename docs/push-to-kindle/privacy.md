@@ -14,7 +14,7 @@ Our guiding principle is to collect only what we need. Here’s what that means 
 
 Depending on the Push to Kindle services you use, we may ask for the following information:
 
-* Your Kindle email address and, optionally, an email address on your approved Amazon Kindle list (used when Kindle email sending is enabled - there are not stored on our servers after sending completes)
+* Your Kindle email address (used when Kindle email sending is enabled - these are not stored on our servers after sending completes)
 * Your public Patreon profile to determine if you have an active subscription (for additional sending credits).
 
 If you are a subscriber (Patreon or Google Play), we do not link your account to the articles you send or the Push to Kindle email addresses you enter. We use Patreon’s OAuth service if you login with Patreon. We request the minimum information we can using their API. We only use the data returned by Patreon to tell us which tier you’re on, which determines the number of credits you get assigned when using the app.
