@@ -27,7 +27,7 @@ Push to Kindle is a free service with sending limits. To increase or remove the 
 
 ## Geolocation data
 
-IP addresses accessing the service are stored for a short time to rate limit parts of the system to prevent abuse.
+We use rate limiting to prevent abuse of the system. The rate limiting system relies on IP addresses accessing the service. These are stored for a short time and are then discarded.
 
 ## Mobile and web app interactions
 
