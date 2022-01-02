@@ -5,7 +5,7 @@ module.exports = {
     }]
   ],
   title: 'FiveFilters.org Docs',
-  description: 'Documentation', 
+  description: 'Documentation',
   themeConfig: {
     docsDir: 'docs',
     search: true,
@@ -17,10 +17,10 @@ module.exports = {
         '',
         'email-address',
         'kindle-addresses',
-        //'personal-documents-features', 
-        'troubleshooting'
+        'troubleshooting',
+        'privacy'
       ],
-      
+
       '/full-text-rss/': [
         '',
         'screenshots',
@@ -34,7 +34,7 @@ module.exports = {
         'example-feeds',
         'blocked-sites'
       ],
-      
+
       '/feed-creator/': [
         '',
         'quick-start',
