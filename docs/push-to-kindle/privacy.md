@@ -35,7 +35,7 @@ We do not currently use third-party web analytics software on the web app or iOS
 
 We use Crashlytics in the Android app to catch errors and help us improve the app. Read the [Crashlytics and App Distribution Data Processing and Security Terms](https://firebase.google.com/terms/crashlytics-app-distribution-data-processing-terms).
 
-Unless you only use the download links in the web app, we rely on Amazon's Personal Documents Service to deliver your articles to your Kindle account. 
+Unless you only use the download links in the web app, we rely on Amazon's Personal Documents Service to deliver your articles to your Kindle account.
 
 ## Cookies and Do Not Track
 
@@ -64,7 +64,7 @@ All data is encrypted via SSL/TLS when transmitted from our servers to your brow
 
 ## Location of site and data
 
-Our servers are located in Germany. But please be aware that we rely on Amazon's personal documents service to delivery articles to your Kindle account. As such, any information you provide to us could be transferred to and stored in the United States. By using our Site, participating in any of our services and/or providing us with your information, you consent to this transfer.
+Our servers are located in Germany. But please be aware that we rely on Amazon's personal documents service to deliver articles to your Kindle account. As such, any information you provide to us could be transferred to and stored in the United States. By using our Site, participating in any of our services and/or providing us with your information, you consent to this transfer.
 
 ## Changes & questions
 
