@@ -2,15 +2,17 @@
 title: Privacy Policy
 ---
 
+# Privacy Policy
+
 The privacy of your data is a big deal to us. In this policy, we lay out: what data we collect and why; how your data is handled; and your rights to your data. We promise we never sell your data: never have, never will.
 
 This policy applies to [Push to Kindle](https://www.fivefilters.org/push-to-kindle/).
 
-# What we collect and why
+## What we collect and why
 
 Our guiding principle is to collect only what we need. Here’s what that means in practice:
 
-## Identity & access
+### Identity & access
 
 Depending on the Push to Kindle services you use, we may ask for the following information:
 
@@ -21,15 +23,15 @@ If you are a subscriber (Patreon or Google Play), we do not link your account to
 
 We’ll never sell your personal info to third parties, and we won’t use your name or company in marketing statements without your permission either.
 
-## Billing information
+### Billing information
 
 Push to Kindle is a free service with sending limits. To increase or remove the limits, we offer subscriptions via Patreon and Google Play. Your credit card is passed directly to the payment processor and doesn't go through our servers. All payment data is stored either by Patreon or Google Play, not by us.
 
-## Geolocation data
+### Geolocation data
 
 We use rate limiting to prevent abuse of the system. The rate limiting system relies on IP addresses accessing the service. These are stored for a short time and are then discarded.
 
-## Mobile and web app interactions
+### Mobile and web app interactions
 
 We do not currently use third-party web analytics software on the web app or iOS app.
 
@@ -37,19 +39,19 @@ We use Crashlytics in the Android app to catch errors and help us improve the ap
 
 Unless you only use the download links in the web app, we rely on Amazon's Personal Documents Service to deliver your articles to your Kindle account.
 
-## Cookies and Do Not Track
+### Cookies and Do Not Track
 
 In the Push to Kindle web app, we use persistent first-party cookies and the browser's local storage to store certain user preferences. A cookie is a piece of text stored by your browser. You can adjust cookie retention settings in your browser. To learn more about cookies, including how to view which cookies have been set and how to manage and delete them, please visit: [allaboutcookies.org](https://www.allaboutcookies.org/).
 
-## Voluntary correspondence
+### Voluntary correspondence
 
 When you write to us with a question or to ask for help, we keep that correspondence, including the email address, so that we have a history of past correspondences to reference if you reach out in the future.
 
-## Information we do not collect
+### Information we do not collect
 
 We don’t collect any characteristics of protected classifications including age, race, gender, religion, sexual orientation, gender identity, gender expression, or physical and mental abilities or disabilities.
 
-# When we access or share your information
+## When we access or share your information
 
 Our default practice is to not access your information. The only times we’ll ever access or share your info are:
 
@@ -57,16 +59,16 @@ Our default practice is to not access your information. The only times we’ll e
 
 **To help you troubleshoot or squash a software bug, with your permission.** If at any point we need to access your account to help you with a Support case, we will ask for your consent before proceeding.
 
-## How we secure your data
+### How we secure your data
 
 All data is encrypted via SSL/TLS when transmitted from our servers to your browser.
 
 
-## Location of site and data
+### Location of site and data
 
 Our servers are located in Germany. But please be aware that we rely on Amazon's personal documents service to deliver articles to your Kindle account. As such, any information you provide to us could be transferred to and stored in the United States. By using our Site, participating in any of our services and/or providing us with your information, you consent to this transfer.
 
-## Changes & questions
+### Changes & questions
 
 We may update this policy as needed to comply with relevant regulations and reflect any new practices.
 
