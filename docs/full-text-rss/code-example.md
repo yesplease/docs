@@ -40,6 +40,6 @@ echo $title;
 
 ## Other languages?
 
-Full-Text RSS is available on [Mashape](https://www.mashape.com/fivefilters/full-text-rss#!) which can generate code to get you started in a variety of languages. [More information](http://blog.fivefilters.org/post/85350711862/full-text-rss-mashape).
+Full-Text RSS is available on [RapidAPI](https://rapidapi.com/fivefilters/api/full-text-rss) which can generate code to get you started in a variety of languages.
 
 If you're comfortable sending HTTP requests and reading JSON responses in your favourite language, it should be fairly easy to adapt the example above.
