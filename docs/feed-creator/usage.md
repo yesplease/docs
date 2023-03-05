@@ -69,7 +69,7 @@ The simplest way to use Feed Creator is to use the form provided. See below for 
 <p>If left empty, the text of the first matching &lt;a&gt; element will be used. This selector is useful if the title is in a different element.</p>
 <p>If set to 0, titles will not be included in the output.</p>
 <p>To use an element's attribute value rather than text content, use @attr, for example: 'img @alt'.</p>
-<p>To use the text in the context element itself (element selected by item selector), enter ':scope'. At the moment, this only works if entered by itself, ie. you cannot write: `:scope > h2`.</p>
+<p>To use the text in the context element itself (element selected by item selector), enter ':scope'. At the moment, this only works if entered by itself, ie. you cannot write: ':scope > h2'.</p>
 
 <h4>Example</h4>
 <p>Given the following HTML, and assuming we've set the item selector to 'div.news .item', to select the desired item title elements we'd pass 'h3' as the item title selector.</p>
@@ -98,7 +98,7 @@ The simplest way to use Feed Creator is to use the form provided. See below for 
 <p>Extract item description from selected element. This is applied within the context of each item selected by the item selector.</p>
 <p>If left empty, the generated feed will not include item descriptions.</p>
 <p>To use an element's attribute value rather than text content, use @attr, for example: 'img @alt'.</p>
-<p>To use the text in the context element itself (element selected by item selector), enter ':scope'. At the moment, this only works if entered by itself, ie. you cannot write: `:scope > p`.</p>
+<p>To use the text in the context element itself (element selected by item selector), enter ':scope'. At the moment, this only works if entered by itself, ie. you cannot write: ':scope > p'.</p>
 
 <h4>Example</h4>
 <p>Given the following HTML, and assuming we've set the item selector to 'div.news .item', to select the desired item description elements we'd pass 'p' as the item description selector.</p>
