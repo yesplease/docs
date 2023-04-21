@@ -43,6 +43,6 @@ In some cases your documents reach your Amazon Kindle account, but Amazon can't 
 
 Push to Kindle process web articles and send the resulting e-book files on your behalf to your Amazon Kindle's Send-to-Kindle address. If you suspect the issue may be with our service, rather than Amazon's end, an easy way to check is to email a small Word or PDF document as an attachment directly to your @kindle.com address (ie. not through Push to Kindle).
 
-If these show up on your Kindle, try using our Push to Kindle [web app](https://pushtokindle.fivefilters.org) and in the download panel click 'MOBI' to save the MOBI file to your computer. Then email the MOBI file as an attachment as you did before and see if that shows up.
+If these show up on your Kindle, try using our Push to Kindle [web app](https://pushtokindle.fivefilters.org) and in the download panel click 'EPUB' to save the EPUB file to your computer. Then email the EPUB file as an attachment as you did before and see if that shows up.
 
 If these steps work for you, and you've checked that your email addresses have been configured in the Push to Kindle app correctly (remember sending directly to your Kindle account uses your regular e-mail address as the 'Send From' address), then you can contact us at help@fivefilters.org for additional support.
